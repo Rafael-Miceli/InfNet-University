@@ -1,0 +1,260 @@
+﻿body{
+	background-color: #F3474B;
+}
+
+.container{
+	width: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.container:after {
+  clear: both;
+}
+
+main{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#FFF2F2;
+	min-height: 600px;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+}
+
+header{
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+}
+
+header a{
+	color: white;
+	text-decoration: none;
+}
+
+#Login a{
+	margin-left: 85%;
+}
+
+#Logo{
+	margin-bottom: 25px;
+}
+
+footer{
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+select{
+	width: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+
+
+
+/* Index */
+a img{
+	border: none;
+}
+
+#SearchLogin{
+	margin-bottom: 10px;
+}
+
+#Search{
+	float: left;	
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#Search input[type="text"]{
+	width: 500px;
+	height: 35px;
+	font-size: 20px;
+}
+
+#Login{
+	padding-top: 0.9%;
+}
+
+#Login input[type="submit"]{
+	height: 35px;
+	font-size: 16px;
+}
+
+#Login input[value="Logar"]{
+	float: left;
+	margin-right: 15px;
+	margin-left: 50px;
+}
+
+#Banner{
+	height: 350px;
+	background-image: url('Images/PromocaoDoDia.jpg');
+	margin-top: 20px;
+}
+
+#OptionsList{
+	border-right: solid 1px black;
+	float: left;
+	width: 200px;
+	height: 500px;
+	margin-right: 15px;
+}
+
+.Header{
+	background-color: #FFB571;
+	padding: 2px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#OptionsList ol{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;
+}
+
+#OptionsList ol li a{
+	text-decoration: none;
+	color: #5774FD;
+}
+
+.promotion{
+	width: 200px;
+	float: left;
+	margin: 8px;	
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.promotion img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#PromosBody{
+	width: 750px;
+	float: left
+}
+
+#Promos{
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+}
+
+
+
+
+/* Register */
+
+#Register{
+	width: 660px;
+	margin: 5px;
+	float: left;
+}
+
+#Register ol{
+	list-style: none;	
+	padding: 0;
+	margin: 0;
+}
+
+#RegisterBody input[type="text"], #RegisterBody input[type="password"], #RegisterBody select{
+	height: 25px;
+	width: 200px;
+}
+
+#RegisterBody input[type="button"], #RegisterBody input[type="submit"]{
+	height: 35px;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+#RegisterBody input[value="Logar"]{
+	width: 80px;
+	margin-right: 15px;
+}
+
+#RegisterBody label{
+	font-size: 18px;
+}
+
+#PromoAside{
+	width: 320px;	
+	margin: 5px;
+	float: left;
+}
+
+fieldset{	
+	border: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.promotionaside{
+	text-align: center;
+	width: 300px;
+	margin: 8px;	
+}
+
+.promotionaside img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+

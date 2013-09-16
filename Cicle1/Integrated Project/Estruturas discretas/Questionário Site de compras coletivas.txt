@@ -1,0 +1,37 @@
+Questionário:
+
+1 - Idade
+
+A) 0 a 18
+B) 18 a 30
+C) 30 a 50
+D) 50 ou mais
+
+2 - Sexo
+
+A) Masculino
+B) Feminino
+
+3 - Qual área você tem mais interesse
+
+A) Eletrônicos
+B) Gastronomia
+C) Smartphones
+D) Livros
+E) Casa e Cozinha
+
+4 - Qual seu estado
+
+A) RJ
+B) SP
+C) MG
+D) ES
+
+5 - Qual seu lazer preferido
+
+A) Ler um livro
+B) Cozinhar
+C) Ver um filme
+D) Falar ao telefone
+E) Jogar video game
+

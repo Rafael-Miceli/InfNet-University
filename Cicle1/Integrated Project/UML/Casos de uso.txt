@@ -1,0 +1,284 @@
+Casos de uso site de compras coletivas:
+
+Caso de uso: Apresentar promoções do dia
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições:
+	Descrição geral: Exibir as promoções do dia
+
+Fluxo típico: 
+	1 - Cliente acessa o site.
+	2 - Sistema busca no banco de dados por promoções referentes àquela data.
+	3 - Sistema exibe promoções do dia.
+	
+Fluxos alternativo: 
+	Passo 2 - "Caso não haja promoções naquela data"
+		1 - sistema exibe a mensagem "Sem promoções do dia hoje".
+		
+=====================================================================================================		
+
+Caso de uso: Apresentar promoções em destaque
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições:
+	Descrição geral: Exibir as promoções em destaque
+
+Fluxo típico: 
+	1 - Cliente acessa o site.
+	2 - Sistema busca no banco de dados por promoções em destaque.
+	3 - Sistema exibe promoções em destaque.
+	
+Fluxos alternativo: 
+	Passo 2 - "Caso não haja promoções em destaque"
+		1 - sistema exibe a mensagem "Sem promoções em destaque".
+		
+		
+=====================================================================================================		
+
+Caso de uso: Apresentar promoções filtradas por estado
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições:
+	Descrição geral: Exibir as promoções filtradas por estado
+
+Fluxo típico: 
+	1 - Cliente acessa o site.
+	2 - Cliente seleciona estado no site
+	2 - Sistema busca no banco de dados por promoções para aquele estado.
+	3 - Sistema exibe promoções daquele estado.
+	
+Fluxos alternativo: 
+	Passo 2 - "Caso não haja promoções para aquele estado"
+		1 - sistema exibe a mensagem "Sem promoções para o estado selecionado".		
+		
+
+
+=====================================================================================================		
+
+Caso de uso: Apresentar promoções filtradas por categoria
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições:
+	Descrição geral: Exibir as promoções filtradas por categoria
+
+Fluxo típico: 
+	1 - Cliente acessa o site.
+	2 - Cliente seleciona categoria no site
+	2 - Sistema busca no banco de dados por promoções para aquela categoria.
+	3 - Sistema exibe promoções daquela categoria.
+	
+Fluxos alternativo: 
+	Passo 2 - "Caso não haja promoções para aquela categoria"
+		1 - sistema exibe a mensagem "Sem promoções para a categoria selecionada".
+		
+		
+		
+		
+=====================================================================================================		
+
+Caso de uso: Apresentar promoções filtradas por busca do cliente
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições:
+	Descrição geral: Exibir as promoções filtradas busca do cliente
+
+Fluxo típico: 
+	1 - Cliente acessa o site.
+	2 - Cliente digita a busca desejada no campo de busca do site
+	2 - Sistema busca no banco de dados por promoções referentes àquela busca.
+	3 - Sistema exibe promoções daquela busca.
+	
+Fluxos alternativo: 
+	Passo 2 - "Caso não haja promoções para aquela busca"
+		1 - sistema exibe a mensagem "Sem promoções para a busca selecionada".
+		
+		
+
+=====================================================================================================		
+
+Caso de uso: Exibir detalhes da promoção
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições:
+	Descrição geral: Exibir detalhes da promoção
+
+Fluxo típico: 
+	1 - Cliente selecione alguma promoção do site
+	2 - Sistema busca no banco de dados por detalhes da promoção selecionada.
+	3 - Sistema exibe detalhes daquela promoção.
+
+
+
+=====================================================================================================		
+
+Caso de uso: Cadastrar cliente
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições: Cliente permanecer logado no site
+	Descrição geral: Cadastrar cliente
+
+Fluxo típico: 
+	1 - Cliente acessa o site.
+	2 - Cliente clica no botão cadastrar-se
+	2 - Sistema exibe formulário de preenchimento para o cadastro com.
+		a - Nome completo
+		b - cpf
+		c - endereço
+		d - cidade
+		e - estado
+		f - e-mail
+		g - senha
+		h - confirmar senha
+		
+	3 - Cliente preenche os campos do formulário.
+	4 - Sistema válida informações do formulário.
+	5 - Sistema cadastra cliente.
+	6 - Sistema loga cliente.	
+	
+Fluxos alternativo: 
+	Passo 4 - "Caso cpf já existente"
+		1 - sistema exibe a mensagem "Este cpf ja está cadastrado, por favor se logue com a conta vinculada a este CPF".	
+		2 - retorne ao passo 1.
+		
+	Passo 4 - "Caso email já existente"
+		1 - sistema exibe a mensagem "Este e-mail ja está cadastrado, por favor se logue com a conta vinculada a este e-mail".	
+		2 - retorne ao passo 1.	
+	
+	Passo 4 - "Caso senha não atender politica de senha"
+		1 - sistema exibe a mensagem "sua senha deve atender a política de senhas do site".	
+		2 - retorne ao passo 2.
+	
+	Passo 4 - "Caso senha diferente de confirmar senha"
+		1 - sistema exibe a mensagem "Valores divergentes nos campos senha e confirma senha".	
+		2 - retorne ao passo 2.
+		
+		
+		
+		
+=====================================================================================================		
+
+Caso de uso: Logar cliente
+
+	Ator: Cliente
+	pré-condições: 
+	pós-condições: Cliente permanecer logado no site
+	Descrição geral: Logar cliente
+
+Fluxo típico: 
+	1 - Cliente acessa o site.
+	2 - Cliente clica no botão Logar
+	3 - Sistema exibe formulário de preenchimento para o cadastro com.
+		a - E-mail
+		b - Senha		
+	4 - Cliente preenche os campos do formulário.
+	5 - Sistema válida informações do formulário.
+	6 - Sistema loga cliente.
+	7 - Sistema retorna cliente a sua página anterior.	
+	
+Fluxos alternativo: 
+	Passo 5 - "Caso E-mail ou senha incorretos"
+		1 - sistema exibe a mensagem "E-mail ou senha incorretos".	
+		2 - retorne ao passo 3.
+
+
+		
+=====================================================================================================		
+
+Caso de uso: Comprar cupom de promoção
+
+	Ator: Cliente
+	pré-condições: Estar logado no sistema
+	pós-condições:
+	Descrição geral: Comprar cupom de promoção
+
+Fluxo típico: 
+	1 - Cliente clica no botão comprar de alguma promoção
+	2 - Cliente é rediriocionado para área de segurança.
+	3 - Sistema exibe formulário perguntando qual forma de pagamento.
+		a - Cartão de crédito
+		b - boleto bancário
+	4 - Cliente seleciona a forma de pagamento.
+	5 - Sistema exibe formulário de dados da forma de pagamento.
+	6 - Sistema válida dados com instituição financeira.
+	7 - Sistema exibe tela de sucesso ao efetuar pagamento.
+	8 - Sistema envia e-mail ao cliente com os dados da compra efetuada.
+	
+Fluxos alternativo:
+	Passo 1 - "Caso cliente não esteja logado no sistema"
+		1 - sistema redireciona para a tela de login.
+		
+	Passo 6 - "Caso instituição financeira rejeite o pagamento"
+		1 - sistema informa ao cliente que forma de pagamento não foi aceita pela instiuição financeira.
+		2 - retorna ao passo 4;	
+		
+		
+
+=====================================================================================================		
+
+Caso de uso: Validar cupons
+
+	Ator: Fornecedor
+	pré-condições: Estar logado no sistema com o perfil de fornecedor
+	pós-condições:
+	Descrição geral: Validar cupons de promoção vendidos
+
+Fluxo típico: 
+	1 - Sistema exibe formulário de validação de cupom com o seguinte campo
+		a - Código do cupom
+	2 - Fornecedor inseri código do cupom no campo
+	3 - Sistema valida o código.
+	4 - Mensagem de código validado com sucesso.
+	
+Fluxos alternativo:
+	Passo 3 - "Caso código inválido"
+		1 - sistema informa que código digitado é invalido.
+		2 - retorna ao passo 1.
+		
+		
+		
+		
+=====================================================================================================		
+
+Caso de uso: Cadastrar promoções no site
+
+	Ator: Administrador
+	pré-condições: Estar logado no sistema com o perfil de administrador
+	pós-condições:
+	Descrição geral: Cadastrar promoções no site
+
+Fluxo típico: 
+	1 - Sistema formulário para inclusão de promoções com os campos.
+		a - título
+		b - descrição
+		c - imagem
+		d - data de expiração
+		e - preço antigo
+		f - preço novo
+		g - é promoção de destaque
+		h - é promoção do dia
+	2 - Sistema válida dados preenchidos.
+	3 - Sistema exibe mensagem de confirmação de operação.
+	4 - Administrador confirma operação.	
+	5 - Sistema cria uma nova promoção.
+	
+Fluxos alternativo:
+	Passo 2 - "Caso seja promoção do dia e 'data de expiração for maior do que hoje'"
+		1 - sistema informa que promoção do dia, não pode ter data maior do que dia atual.
+		2 - retorna ao passo 1.		
+		
+	Passo 2 - "Caso seja promoção do dia e promoção de destaque"
+		1 - sistema informa que promoção só pode ser de um tipo, ou de destaque ou do dia.
+		2 - retorna ao passo 1.	
+		
+	Passo 3 - "Caso administrador não confirme operação"
+		1 - retorna ao passo 1.		
+	
+	
+	

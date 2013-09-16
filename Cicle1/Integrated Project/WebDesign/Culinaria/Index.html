@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="Scripts/Data.js"></script>
+	<script src="Scripts/Index.js"></script>
+	
+	<link href="Content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<section id="Logo">
+				<a href="Index.html"><img src="Content/Images/Logo.jpg" /></a>
+			</section>
+			<section id="SearchLogin">
+				<section id="Search">
+					<form action="#" method="post">
+						<input id="txtSearch" type="text" />
+						<input type="submit" value="buscar" />
+					</form>
+				</section>
+				<section id="Login">
+					<form action="Login.html">
+						<input type="submit" value="Logar" />
+					</form>
+					<form action="Register.html">
+						<input type="submit" value="Cadastre-se" />
+					</form>
+				</section>
+			</section>
+			<section id="Banner">	
+			</section>
+		</header>
+		
+		<main>
+			<section id="OptionPromos">
+				<section id="PromosHeader" class="Header">
+					<h2>
+						Ofertas em Destaque
+					</h2>
+				</section>
+				<aside id="OptionsList">
+					<h4>Estados</h4>
+					<select id="State">
+						<option value="RJ">RJ</option>
+						<option value="SP">SP</option>
+						<option value="DF">DF</option>
+						<option value="ES">ES</option>
+						<option value="RS">RS</option>
+					<select>
+					<br />
+					<h4>Categorias</h4>
+					<ol>
+						<li><a href="?Roupas">Italianas</a></li>
+						<li><a href="?Brinquedos">Japonesa</a></li>
+						<li><a href="?Sado">Mineira</a></li>
+						<li><a href="?Jogos">Churrascos</a></li>
+						<li><a href="?Filmes">Frutos do Mar</a></li>
+					</ol>
+				</aside>
+				<section id="PromosBody">
+					<div id="Promos">
+					</div>
+				</section>
+			</section>
+		</main>
+		
+		<footer>
+			&copy; 2013 - EveryFood
+		</footer>
+	</div>
+</body>
+</html>
