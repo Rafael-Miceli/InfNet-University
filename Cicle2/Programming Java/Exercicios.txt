@@ -1,0 +1,190 @@
+Lista-1 Exercicios
+
+1-Defina classe
+
+é uma estrutura que abstrai um conjunto de objetos com características similares
+
+2-Defina objeto
+
+é a instância de uma classe
+
+3-Quais são as 3 partes de uma classe
+
+Construtores, Propriedades e métodos
+
+4-Qual o nome do método no Java onde o programa é iniciado?
+
+O nome da própria classe, também chamado de construtor
+
+5-Dados os códigos abaixo, mostre a saída:
+
+a)public class Um
+   {
+      public static void main(String[]args)
+        {
+          for(int i=18;i<20;i++)
+           {
+             System.out.println("teste"); 
+           }
+         }
+    }
+
+b)public class Dois
+   {
+      public static void main(String[]args)
+        {
+          for(int i=5;i<20;i=i+2)
+           {
+             if(i%2==0)
+              System.out.println(i); 
+           }
+         }
+    }
+
+c)public class Tres
+   {
+      public static void main(String[]args)
+        {
+          for(int i=1;i<20;i++)
+           {
+             if( (i==0)||(i>2) )
+              System.out.println(i);
+           }
+         }
+    }
+
+
+d)public class Tres
+   {
+      public static void main(String[]args)
+        {
+          for(int i=1;i<20;i++)
+           {
+             if( (i<5)||(i>2) )
+              System.out.println(i);
+           }
+         }
+    }
+
+e)public class Tres
+   {
+      public static void main(String[]args)
+        {
+          for(int i=1;i<20;i=i+3)
+           {
+             if( (i<10)&&(i<20) )
+              System.out.println(i);
+           }
+         }
+    }
+
+
+f)public class Tres
+   {
+      public static void main(String[]args)
+        {
+          int i=2; 
+          while(i<20)
+           {
+             if( (i==0)||(i>2) )           
+              System.out.println(i);
+             i=i+5;
+           }
+         }
+    }
+
+
+5-O que é o JOptionPane e como foi usado?
+
+6-Faça um programa em Java para imprimir os numéros pares entre 100 e 1000
+
+7-Faça um programa em Java que leia uma idade(JOptionPane.inputMessageDialog) e imprima "Maior de idade" ou 
+"Menor de idade"
+
+8-Faça um programa em Java para Ler tres números ( a, b e c ) e imprima o maior
+
+9-Faça um programa em Java verificar se um número é divisível por 2
+
+10-Faça uma classe Pessoa com os atributos nome, idade e telefone, um construtor qualquer e os métodos set e get.
+
+11-Faça uma classe Gerente com os atributos salario e endereco, um construtor qualquer e os métodos set e get.
+
+12-Faça uma classe GerenteComercial com o atributo filial, um construtor qualquer e os métodos set e get.
+
+13-Faça uma classe Principal com o método public static void main(String[]args) e as operações:
+
+obs: Gerente herda de Pessoa, GerenteComercial herda de Gerente.
+
+a) Instancie os objetos
+pessoa("marcos",12, "233-2334")
+gerente("ricardo",23,"234-3443",1000.00,"Rua xxx")
+gerenteComercial("Jose",44,"232-3443",1200.00,"Rua yyyy","Botafogo")
+
+b) Imprima as informações do gerenteComercial
+
+c) Troque o nome jose para Paulo
+
+d) Imprima novamente as informações do gerenteComercial
+
+14-O que é sobrecarga(overload)?
+
+15-O que é sobreposição(override)?
+
+16-Faça uma sobrecarga, utilizando as classes acima
+
+17-Faça uma sobreposição, utilizando as classes acima
+
+18-Qual o significado da classe abstrata? No seu entender, das classes acima
+qual poderia ser abstrata e por que?
+
+19-Seja a classe em Java:
+
+public class Exercicio
+{
+   private String palavra;
+
+   public Exercicio(String palavra)
+    {
+     this.palavra=palavra;
+    }
+   public String getPalavra()
+    { 
+       return palavra;
+    }
+   public void setPalavra(String palavra)
+    {
+       this.palavra=palavra;  
+    }
+   public int contaVogais()
+    {
+         //obs:A classe String tem o método length() que retorna o número de letras
+
+    }
+   public int contaConsoantes()
+    {
+         //obs:A classe String tem o método charAt(posicao) que retorna a letra na posição da palavra
+
+    }
+   public static void main(String[]args)
+    {
+      Exercicio e=new Exercicio();
+      System.out.println("Numero de vogais:"+e.contaVogais());
+    }
+}   
+
+Faça os métodos que estão faltando.
+
+   
+20-Responda pode ou não pode ser feito, com relação as classes criadas nos exercícios de 10 a 13:
+a) Pessoa p=new Gerente();
+b) Gerente g=new Pessoa();
+c) GerenteComercial gc=new Pessoa();
+d) Gerente g=new GerenteComercial();
+e) Pessoa p= new GerenteComercial();
+
+
+
+
+
+
+
