@@ -10,6 +10,7 @@ main()
 
     Movimento _movimento;
     FILE *_file;
+    char tipoMov;
     int i = 0;
 
 
@@ -21,12 +22,15 @@ main()
         scanf(" %d", &_movimento.cod_prod);
         printf("Informe a quantidade de produtos movimentados\n");
         scanf(" %d", &_movimento.quantidade);
+        printf("Informe tipo de movimento, entrada (+) ou saida (-)\n");
+        scanf(" %c", &tipoMov);
 
         _file = fopen("arqMov.txt", "a");
         if (_file != NULL){
-            fprintf(_file, " %d", _movimento.cod_mov);
+            fprintf(_file, "%d", _movimento.cod_mov);
             fprintf(_file, " %d",_movimento.cod_prod);
-            fprintf(_file, " %d\n",_movimento.quantidade);
+            fprintf(_file, " %c", tipoMov);
+            fprintf(_file, "%d\n",_movimento.quantidade);
 
             fclose(_file);
         }
