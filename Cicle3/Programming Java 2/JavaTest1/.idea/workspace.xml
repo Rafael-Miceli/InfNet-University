@@ -7,10 +7,11 @@
     <file path="/LogExceptions.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383910062009" ignored="false" />
     <file path="/LogExceptionsFormatted.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383913350391" ignored="false" />
     <file path="/Contact.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383929513996" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383931635289" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383933010836" ignored="false" />
     <file path="/fragment.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383918012003" ignored="false" />
     <file path="/Phone.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383929659009" ignored="false" />
-    <file path="/CreateContact.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383931368986" ignored="false" />
+    <file path="/CreateContact.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383931963943" ignored="false" />
+    <file path="/Autoboxing.java" changelist="0e3572ac-08f4-4b0f-b924-43a759396593" time="1383932977859" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <file leaf-file-name="Contact.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Question2/Domain/Model/Contact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="49" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
+            <state line="42" column="33" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#476#483#0" expanded="true" />
@@ -86,7 +87,7 @@
       <file leaf-file-name="CreateContact.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Question2/Presentation/CreateContact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="48" selection-start="954" selection-end="954" vertical-scroll-proportion="-1.0851064">
+            <state line="15" column="38" selection-start="320" selection-end="320" vertical-scroll-proportion="0.21702127">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/Question2/Domain/Model/Phone.java" />
         <option value="$PROJECT_DIR$/src/Question2/Domain/Model/Contact.java" />
         <option value="$PROJECT_DIR$/src/Question2/Presentation/CreateContact.java" />
+        <option value="$PROJECT_DIR$/src/Question3/Autoboxing.java" />
       </list>
     </option>
   </component>
@@ -177,6 +179,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="JavaTest1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaTest1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaTest1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Question3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -545,11 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Question3/Autoboxing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/java2/materials/java2-m4-io-exercise-files/demos/after/src/greetings/HelloWorld.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="74" selection-start="676" selection-end="676" vertical-scroll-proportion="0.36939722">
@@ -578,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Question2/Domain/Model/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="49" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#476#483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Question2/Domain/Model/Phone.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="18" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
@@ -595,9 +600,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Question2/Domain/Model/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="33" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#476#483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Question3/Autoboxing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="46" selection-start="275" selection-end="275" vertical-scroll-proportion="0.47021276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Question2/Presentation/CreateContact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="48" selection-start="954" selection-end="954" vertical-scroll-proportion="-1.0851064">
+        <state line="15" column="38" selection-start="320" selection-end="320" vertical-scroll-proportion="0.21702127">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
