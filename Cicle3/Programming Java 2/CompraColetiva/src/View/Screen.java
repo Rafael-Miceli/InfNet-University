@@ -55,11 +55,13 @@ public class Screen
 
         //promotionService.CreatePromotion();
 
+        /*
         for (Promotion promotion: promotionService.GetPromotions())
         {
             System.out.println(promotion.GetTitle());
             System.out.println(promotion.GetSupplier().GetRazaoSocial());
         }
+        */
 
     }
 
