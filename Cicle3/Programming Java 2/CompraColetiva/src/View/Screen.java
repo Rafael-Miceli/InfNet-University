@@ -1,9 +1,11 @@
 package View;
 
 import Domain.Promotion;
+import Domain.Supplier;
 import Presentation.PromotionService;
 import Presentation.SupplierService;
 
+import javax.swing.*;
 import java.util.List;
 
 /**
@@ -19,50 +21,56 @@ public class Screen
     {
         boolean run = true;
 
-//        while(run)
-//        {
-//            System.out.println("Escolha uma opção: ");
-//            System.out.println("1 - Cadastrar Fornecedor: ");
-//            System.out.println("2 - Cadastrar Promoção: ");
-//            System.out.println("3 - Buscar Promoção: ");
-//            System.out.println("4 - Sair: ");
-//
-//            String opt = JOptionPane.showInputDialog("Escolha uma das opçoes anteriores");
-//
-//            switch (opt)
-//            {
-//                case "1":
-//
-//                    break;
-//                case "2":
-//                    break;
-//                case "3":
-//                    break;
-//                case "4":
-//                    break;
-//                default:
-//                    break;
-//            }
-//        }
-
-
         SupplierService supplierService = new SupplierService();
-
-       //supplierService.CreateSupplier();
-       //supplierService.GetSuppliers();
-
         PromotionService promotionService = new PromotionService();
 
-        //promotionService.CreatePromotion();
-
-        /*
-        for (Promotion promotion: promotionService.GetPromotions())
+        while(run)
         {
-            System.out.println(promotion.GetTitle());
-            System.out.println(promotion.GetSupplier().GetRazaoSocial());
-        }
-        */
+            System.out.println("Escolha uma opção: ");
+            System.out.println("1 - Cadastrar Fornecedor: ");
+            System.out.println("2 - Cadastrar Promoção: ");
+            System.out.println("3 - Buscar Promoção: ");
+            System.out.println("4 - Sair: ");
 
+            String strOpt = JOptionPane.showInputDialog("Escolha uma das opçoes anteriores");
+            Integer opt = 0;
+
+            try
+            {
+                opt = Integer.parseInt(strOpt);
+            }
+            catch(Exception ex)
+            {
+                ex.getStackTrace();
+            }
+
+            switch (opt)
+            {
+                case 1:
+                    supplierService.CreateSupplier();
+                    break;
+                case 2:
+                    promotionService.CreatePromotion();
+                    break;
+                case 3:
+                    Promotion selectedPromotion = promotionService.FindPromotionByCode(JOptionPane.showInputDialog("Digite o código a ser buscado."));
+                    if (selectedPromotion == null)
+                        System.out.println("Promoção não encontrada");
+                    else
+                    {
+                        System.out.println("Código: " + selectedPromotion.GetCode());
+                        System.out.println("Título: " + selectedPromotion.GetTitle());
+                        System.out.println("Fornecedor: " + selectedPromotion.GetSupplier().GetRazaoSocial());
+                    }
+                    break;
+                case 4:
+                    run = false;
+                    break;
+                default:
+                    System.out.print("Opção invalida, selecione novamente");
+                    break;
+            }
+        }
     }
 
 }
