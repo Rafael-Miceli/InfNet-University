@@ -30,6 +30,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -66,8 +68,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -77,30 +77,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SupplierRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Repository/SupplierRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="4" selection-start="307" selection-end="2558" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1650#1660#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SupplierService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Presentation/SupplierService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="40" selection-start="424" selection-end="456" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Screen.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CompraColetiva/src/View/Screen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="10" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.7683924">
+            <state line="48" column="88" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.53482586">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,12 +88,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromotionService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Presentation/PromotionService.java">
+      <file leaf-file-name="PromotionRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Repository/PromotionRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="34" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.0">
+            <state line="21" column="65" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1650#1661#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,13 +115,13 @@
         <option value="$PROJECT_DIR$/CompraColetiva/src/Repository/AppendableObjectOutputSream.java" />
         <option value="$PROJECT_DIR$/CompraColetiva/src/Repository/AppendableObjectOutputStream.java" />
         <option value="$PROJECT_DIR$/CompraColetiva/src/Repository/SupplierRepository.java" />
-        <option value="$PROJECT_DIR$/CompraColetiva/src/Domain/Supplier.java" />
         <option value="$PROJECT_DIR$/CompraColetiva/src/Presentation/CreatePromotion.java" />
-        <option value="$PROJECT_DIR$/CompraColetiva/src/Repository/PromotionRepository.java" />
         <option value="$PROJECT_DIR$/CompraColetiva/src/Presentation/SupplierService.java" />
         <option value="$PROJECT_DIR$/CompraColetiva/src/Presentation/PromotionService.java" />
-        <option value="$PROJECT_DIR$/CompraColetiva/src/Domain/Promotion.java" />
         <option value="$PROJECT_DIR$/CompraColetiva/src/View/Screen.java" />
+        <option value="$PROJECT_DIR$/CompraColetiva/src/Repository/PromotionRepository.java" />
+        <option value="$PROJECT_DIR$/CompraColetiva/src/Domain/Promotion.java" />
+        <option value="$PROJECT_DIR$/CompraColetiva/src/Domain/Supplier.java" />
       </list>
     </option>
   </component>
@@ -150,8 +131,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -179,7 +160,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -303,18 +283,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RunManager" selected="Application.Screen">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -329,19 +310,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -369,6 +337,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -445,7 +426,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -456,13 +437,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32858837" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67064846" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67064846" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.6725979" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740214" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -538,9 +519,37 @@
     <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Repository/SupplierRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Presentation/SupplierService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="40" selection-start="424" selection-end="456" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/View/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="10" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1650#1660#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Presentation/PromotionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="34" selection-start="2020" selection-end="2020" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Repository/SupplierRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -571,56 +580,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Repository/SupplierRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="307" selection-end="2558" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1650#1660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Domain/Supplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+        <state line="17" column="4" selection-start="307" selection-end="2534" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Presentation/SupplierService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="424" selection-end="456" vertical-scroll-proportion="0.0">
+        <state line="21" column="40" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Presentation/PromotionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="34" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Domain/Promotion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="246" selection-end="246" vertical-scroll-proportion="0.060714286">
+        <state line="22" column="42" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Domain/Supplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="34" selection-start="115" selection-end="115" vertical-scroll-proportion="0.14417745">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Repository/PromotionRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="112" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.6648501">
+        <state line="21" column="65" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1685#1696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CompraColetiva/src/Presentation/PromotionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="34" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1650#1661#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CompraColetiva/src/View/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="10" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.7683924">
+        <state line="48" column="88" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.53482586">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -18,7 +18,6 @@ public class PromotionRepository
 {
     AppendableObjectOutputStream _aoos = null;
     ObjectOutputStream _oos = null;
-    ObjectInputStream _ois = null;
 
     public void InsertPromotion(Promotion promotion)
     {
