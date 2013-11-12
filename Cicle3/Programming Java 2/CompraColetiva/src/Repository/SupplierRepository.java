@@ -32,17 +32,20 @@ public class SupplierRepository
                 fos = new FileOutputStream(file, true);
                 _aoos = new AppendableObjectOutputStream(fos);
                 _aoos.writeObject(supplier);
+                System.out.println("Fornecedor cadastrado com sucesso!");
             }
             else
             {
                 fos = new FileOutputStream(file);
                 _oos = new ObjectOutputStream(fos);
                 _oos.writeObject(supplier);
+                System.out.println("Fornecedor cadastrado com sucesso!");
             }
 
         }
         catch(IOException ex)
         {
+            System.out.println("Falha ao cadastrar fornecedor!");
             ex.getStackTrace();
         }
         finally {
@@ -57,6 +60,7 @@ public class SupplierRepository
             }
             catch(IOException ex)
             {
+                System.out.println("Falha ao cadastrar fornecedor!");
                 ex.getStackTrace();
             }
         }
@@ -88,8 +92,10 @@ public class SupplierRepository
         }
         catch(IOException ex)
         {
+            System.out.println("Falha ao Ler arquivo de fornecedores!");
             ex.getStackTrace();
         } catch (ClassNotFoundException e) {
+            System.out.println("Falha ao Ler arquivo de fornecedores!");
             e.printStackTrace();
         } finally
         {
@@ -101,6 +107,7 @@ public class SupplierRepository
             }
             catch (IOException ex)
             {
+                System.out.println("Falha ao Ler arquivo de fornecedores!");
                 ex.getStackTrace();
             }
         }

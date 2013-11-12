@@ -56,6 +56,9 @@ public class PromotionService
                     break;
                 }
             }
+
+            if (notFound)
+                System.out.println("Fornecedor não encontrado, tente de novo");
         }
 
         promotion.SetSupplier(selectedSupplier);

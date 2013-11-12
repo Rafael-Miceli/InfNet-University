@@ -32,17 +32,20 @@ public class PromotionRepository
                 fos = new FileOutputStream(file, true);
                 _aoos = new AppendableObjectOutputStream(fos);
                 _aoos.writeObject(promotion);
+                System.out.println("Promoção cadastrada com sucesso!");
             }
             else
             {
                 fos = new FileOutputStream(file);
                 _oos = new ObjectOutputStream(fos);
                 _oos.writeObject(promotion);
+                System.out.println("Promoção cadastrada com sucesso!");
             }
 
         }
         catch(IOException ex)
         {
+            System.out.println("Falha ao cadastrar promoção!");
             ex.getStackTrace();
         }
         finally {
@@ -57,6 +60,7 @@ public class PromotionRepository
             }
             catch(IOException ex)
             {
+                System.out.println("Falha ao cadastrar promoção!");
                 ex.getStackTrace();
             }
         }
@@ -88,8 +92,10 @@ public class PromotionRepository
         }
         catch(IOException ex)
         {
+            System.out.println("Falha ao Ler arquivo de promoções!");
             ex.getStackTrace();
         } catch (ClassNotFoundException e) {
+            System.out.println("Falha ao Ler arquivo de promoções!");
             e.printStackTrace();
         } finally
         {
@@ -101,6 +107,7 @@ public class PromotionRepository
             }
             catch (IOException ex)
             {
+                System.out.println("Falha ao Ler arquivo de promoções!");
                 ex.getStackTrace();
             }
         }
