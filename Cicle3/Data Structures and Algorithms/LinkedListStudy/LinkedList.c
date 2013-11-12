@@ -7,7 +7,7 @@
         struct node *next;
     };
 
-    struct node *head = NULL;
+    struct node *root = NULL;
     struct node *curr = NULL;
 
 struct node* Create(int val)
@@ -24,13 +24,13 @@ struct node* Create(int val)
     ptr->val = val;
     ptr->next = NULL;
 
-    head = curr = ptr;
+    root = curr = ptr;
     return ptr;
 }
 
 struct node* Add(int val, bool addToEnd)
 {
-    if(head == NULL)
+    if(root == NULL)
         return (Create(val));
 
     if(addToEnd)
@@ -56,8 +56,8 @@ struct node* Add(int val, bool addToEnd)
     }
     else
     {
-        ptr->next = head;
-        head = ptr;
+        ptr->next = root;
+        root = ptr;
     }
 
     return ptr;
@@ -65,7 +65,7 @@ struct node* Add(int val, bool addToEnd)
 
 struct node* Find(int val, struct node **prev)
 {
-    struct node *ptr = head;
+    struct node *ptr = root;
     struct node *tmp = NULL;
     bool found = false;
 
@@ -117,8 +117,8 @@ int Delete(int val)
 
         if(del == curr)
             curr = prev;
-        else if(del == head)
-            head = del->next;
+        else if(del == root)
+            root = del->next;
     }
 
     free(del);
@@ -129,7 +129,7 @@ int Delete(int val)
 
 void PrintList()
 {
-    struct node *ptr = head;
+    struct node *ptr = root;
 
     printf("\n --------Printing list start-------- \n");
     while(ptr != NULL)
