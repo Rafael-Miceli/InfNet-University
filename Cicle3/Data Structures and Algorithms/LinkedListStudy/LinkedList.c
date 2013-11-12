@@ -65,7 +65,81 @@ struct node* Add(int val, bool addToEnd)
 
 struct node* Find(int val, struct node **prev)
 {
+    struct node *ptr = head;
+    struct node *tmp = NULL;
+    bool found = false;
 
+    printf("\n Searching the list for value [%d] \n", val);
+
+    while(ptr != NULL)
+    {
+        if(ptr->val == val)
+        {
+            found = true;
+            break;
+        }
+        else
+        {
+            tmp = ptr;
+            ptr = ptr->next;
+        }
+    }
+
+    if(found == true)
+    {
+        if(prev)
+            *prev = tmp;
+
+        return ptr;
+    }
+    else
+    {
+        return NULL;
+    }
+
+}
+
+int Delete(int val)
+{
+    struct node *prev = NULL;
+    struct node *del = NULL;
+
+    printf("\n Deleting value [%d] from list\n", val);
+
+    del = Find(val, &prev);
+
+    if(del == NULL)
+        return -1;
+    else
+    {
+        if(prev != NULL)
+            prev->next = del->next;
+
+        if(del == curr)
+            curr = prev;
+        else if(del == head)
+            head = del->next;
+    }
+
+    free(del);
+    del = NULL;
+
+    return 0;
+}
+
+void PrintList()
+{
+    struct node *ptr = head;
+
+    printf("\n --------Printing list start-------- \n");
+    while(ptr != NULL)
+    {
+        printf("\n [%d] \n", ptr->val);
+        ptr = ptr->next;
+    }
+    printf("\n --------Printing list end-------- \n");
+
+    return;
 }
 
 int main()
@@ -87,6 +161,42 @@ int main()
     */
 
 
+    int i = 0, ret = 0;
+    struct node *ptr = NULL;
 
+    PrintList();
+
+    for(i = 5; i<10; i++)
+        Add(i*2, true);
+
+    PrintList();
+
+    for(i = 4; i>0; i--)
+        Add(i, false);
+
+    PrintList();
+
+    for(i = 1; i<10; i+=4)
+    {
+        ptr = Find(i*2, NULL);
+
+        if(ptr == NULL)
+            printf("\n Search [val = %d] failed, no element found \n", i*2);
+        else
+            printf("\n Search passed [val = %d] \n", ptr->val);
+
+        PrintList();
+
+        ret = Delete(i*2);
+        if(ret != 0)
+            printf("\n Delete [val = %d] failed, no element found \n", i*2);
+        else
+            printf("\n Delete [val = %d] passed \n", i*2);
+
+        PrintList();
+
+        return 0;
+    }
+    PrintList();
 }
 
