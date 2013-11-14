@@ -5,7 +5,7 @@
     typedef struct{
         char Nome[40];
         char Categoria[40];
-        double Preco;
+        float Preco;
     } Produto;
 
     struct no{
@@ -37,11 +37,16 @@ struct no* CriarLista(Produto produto)
     return ptr;
 }
 
-void CadastrarProdutos();
+void CadastrarProdutos()
 {
-    struct Produto produto = NULL;
-    printf("\n Digite o nome de um produto");
-    scanf(Produto.Nome);
+    Produto produto;
+    printf("\n Digite o nome do produto \n");
+    scanf("%s",produto.Nome);
+    printf("\n Digite a categoria do produto \n");
+    scanf("%s",produto.Categoria);
+    printf("\n Digite o preco do produto \n");
+    scanf("%f",produto.Preco);
+
 }
 
 int main()
