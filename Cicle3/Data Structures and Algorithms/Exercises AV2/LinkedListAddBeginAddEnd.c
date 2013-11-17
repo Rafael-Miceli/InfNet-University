@@ -79,7 +79,10 @@ struct node* Find(char *value, struct node **prev)
 
     while(new_node != NULL)
     {
-        if(strcmp(new_node->value,value))
+        printf("%s\n", new_node->value);
+        printf("%s\n", value);
+
+        if(!strcmp(new_node->value,value))
         {
             found = true;
             break;
@@ -190,7 +193,6 @@ int main()
                     default:
                         printf("Wrong choice\n");
                  }
-
 
                  break;
              case 2:
