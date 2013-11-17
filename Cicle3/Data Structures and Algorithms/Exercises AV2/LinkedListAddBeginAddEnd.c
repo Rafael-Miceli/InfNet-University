@@ -3,18 +3,151 @@
 #include<stdbool.h>
 
     struct node{
-        char *val;
+        char *value;
         struct node *next;
     };
 
     struct node *root = NULL;
     struct node *curr = NULL;
 
+struct node* Create(char *value)
+{
+    printf("\n creating list with root node as [%s]\n", value);
+    struct node *new_node = (struct node*)malloc(sizeof(struct node));
+
+    if(new_node == NULL)
+    {
+        printf("\n Node creation failed \n");
+        return NULL;
+    }
+
+    new_node->value = value;
+    new_node->next = NULL;
+
+    root = curr = new_node;
+    return new_node;
+}
+
+struct node* Add(char *value, bool addToEnd)
+{
+    if(root == NULL)
+        return (Create(value));
+
+    if(addToEnd)
+        printf("\n Adding node to the end of list with value[%s]\n", value);
+    else
+        printf("\n Adding node to the beginning of list with value[%s]\n", value);
+
+    struct node *new_node = (struct node*)malloc(sizeof(struct node));
+
+    if(new_node == NULL)
+    {
+        printf("\n Node creation failed \n");
+        return NULL;
+    }
+
+    new_node->value = value;
+    new_node->next = NULL;
+
+    if(addToEnd)
+    {
+        curr->next = new_node;
+        curr = new_node;
+    }
+    else
+    {
+        new_node->next = root;
+        root = new_node;
+    }
+
+    return new_node;
+}
+
+struct node* Find(char *value, struct node **prev)
+{
+    struct node *new_node = root;
+    struct node *tmp = NULL;
+    bool found = false;
+
+    printf("\n Searching the list for value [%s] \n", value);
+
+    while(new_node != NULL)
+    {
+        if(new_node->value == value)
+        {
+            found = true;
+            break;
+        }
+        else
+        {
+            tmp = new_node;
+            new_node = new_node->next;
+        }
+    }
+
+    if(found == true)
+    {
+        if(prev)
+            *prev = tmp;
+
+        return new_node;
+    }
+    else
+    {
+        return NULL;
+    }
+
+}
+
+int Delete(char *value)
+{
+    struct node *prev = NULL;
+    struct node *del = NULL;
+
+    printf("\n Deleting value [%s] from list\n", value);
+
+    del = Find(value, &prev);
+
+    if(del == NULL)
+        return -1;
+    else
+    {
+        if(prev != NULL)
+            prev->next = del->next;
+
+        if(del == curr)
+            curr = prev;
+        else if(del == root)
+            root = del->next;
+    }
+
+    free(del);
+    del = NULL;
+
+    return 0;
+}
+
+void PrintList()
+{
+    struct node *new_node = root;
+
+    printf("\n --------Printing list start-------- \n");
+    while(new_node != NULL)
+    {
+        printf("\n [%s] \n", new_node->value);
+        new_node = new_node->next;
+    }
+    printf("\n --------Printing list end-------- \n");
+
+    return;
+}
+
+
 int main()
 {
     int i = 0, ret = 0, choice = 0;
     char value[50];
-    struct node *ptr = NULL;
+    struct node *new_node = NULL;
 
     while(1)
     {
@@ -79,12 +212,12 @@ int main()
 
     for(i = 1; i<10; i+=4)
     {
-        ptr = Find(i*2, NULL);
+        new_node = Find(i*2, NULL);
 
-        if(ptr == NULL)
+        if(new_node == NULL)
             printf("\n Search [val = %d] failed, no element found \n", i*2);
         else
-            printf("\n Search passed [val = %d] \n", ptr->val);
+            printf("\n Search passed [val = %d] \n", new_node->val);
 
         PrintList();
 
@@ -103,134 +236,3 @@ int main()
     */
 }
 
-struct node* Create(char *val)
-{
-    printf("\n creating list with root node as [%d]\n", val);
-    struct node *ptr = (struct node*)malloc(sizeof(struct node));
-
-    if(ptr == NULL)
-    {
-        printf("\n Node creation failed \n");
-        return NULL;
-    }
-
-    ptr->val = val;
-    ptr->next = NULL;
-
-    root = curr = ptr;
-    return ptr;
-}
-
-struct node* Add(char *val, bool addToEnd)
-{
-    if(root == NULL)
-        return (Create(val));
-
-    if(addToEnd)
-        printf("\n Adding node to the end of list with value[%d]\n", val);
-    else
-        printf("\n Adding node to the beginning of list with value[%d]\n", val);
-
-    struct node *ptr = (struct node*)malloc(sizeof(struct node));
-
-    if(ptr == NULL)
-    {
-        printf("\n Node creation failed \n");
-        return NULL;
-    }
-
-    ptr->val = val;
-    ptr->next = NULL;
-
-    if(addToEnd)
-    {
-        curr->next = ptr;
-        curr = ptr;
-    }
-    else
-    {
-        ptr->next = root;
-        root = ptr;
-    }
-
-    return ptr;
-}
-
-struct node* Find(int val, struct node **prev)
-{
-    struct node *ptr = root;
-    struct node *tmp = NULL;
-    bool found = false;
-
-    printf("\n Searching the list for value [%d] \n", val);
-
-    while(ptr != NULL)
-    {
-        if(ptr->val == val)
-        {
-            found = true;
-            break;
-        }
-        else
-        {
-            tmp = ptr;
-            ptr = ptr->next;
-        }
-    }
-
-    if(found == true)
-    {
-        if(prev)
-            *prev = tmp;
-
-        return ptr;
-    }
-    else
-    {
-        return NULL;
-    }
-
-}
-
-int Delete(int val)
-{
-    struct node *prev = NULL;
-    struct node *del = NULL;
-
-    printf("\n Deleting value [%d] from list\n", val);
-
-    del = Find(val, &prev);
-
-    if(del == NULL)
-        return -1;
-    else
-    {
-        if(prev != NULL)
-            prev->next = del->next;
-
-        if(del == curr)
-            curr = prev;
-        else if(del == root)
-            root = del->next;
-    }
-
-    free(del);
-    del = NULL;
-
-    return 0;
-}
-
-void PrintList()
-{
-    struct node *ptr = root;
-
-    printf("\n --------Printing list start-------- \n");
-    while(ptr != NULL)
-    {
-        printf("\n [%d] \n", ptr->val);
-        ptr = ptr->next;
-    }
-    printf("\n --------Printing list end-------- \n");
-
-    return;
-}
