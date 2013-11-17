@@ -18,13 +18,16 @@ struct node* Create(char *value)
     if(new_node == NULL)
     {
         printf("\n Node creation failed \n");
+        free(value);
         return NULL;
     }
 
-    new_node->value = value;
+    new_node->value = strdup(value);
     new_node->next = NULL;
 
     root = curr = new_node;
+
+    free(value);
     return new_node;
 }
 
@@ -43,10 +46,11 @@ struct node* Add(char *value, bool addToEnd)
     if(new_node == NULL)
     {
         printf("\n Node creation failed \n");
+        free(value);
         return NULL;
     }
 
-    new_node->value = value;
+    new_node->value = strdup(value);
     new_node->next = NULL;
 
     if(addToEnd)
@@ -59,6 +63,8 @@ struct node* Add(char *value, bool addToEnd)
         new_node->next = root;
         root = new_node;
     }
+
+    free(value);
 
     return new_node;
 }
@@ -73,7 +79,7 @@ struct node* Find(char *value, struct node **prev)
 
     while(new_node != NULL)
     {
-        if(new_node->value == value)
+        if(strcmp(new_node->value,value))
         {
             found = true;
             break;
@@ -109,7 +115,10 @@ int Delete(char *value)
     del = Find(value, &prev);
 
     if(del == NULL)
+    {
         return -1;
+    }
+
     else
     {
         if(prev != NULL)
@@ -124,6 +133,7 @@ int Delete(char *value)
     free(del);
     del = NULL;
 
+    free(value);
     return 0;
 }
 
@@ -184,7 +194,7 @@ int main()
 
                  break;
              case 2:
-                 printf("\nEnter a value to add to the List: ");
+                 printf("\nEnter a value to delete from the List: ");
                  scanf("%s", value);
                  Delete(value);
                  break;
