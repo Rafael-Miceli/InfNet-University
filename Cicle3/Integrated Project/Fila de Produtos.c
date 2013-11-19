@@ -16,12 +16,12 @@ struct node
 {
     Oferta oferta_pedida;
     struct node *link;
-}*front=NULL,*rear=NULL;
+}*primeiro_no=NULL,*ultimo_no=NULL;
 
-void insert(int numero_oferta_selecionada);
+void InserirPedidoNaFila(int numero_oferta_selecionada);
 void RemoverPedidoSelecionado(int numero_pedido_selecionado);
-int isEmpty();
-void display();
+int FilaDePedidosVazia();
+void ExibirPedidos();
 void ExibirOfertas();
 void CadastrarOfertas();
 bool OfertaPedidaValida(int numero_oferta_selecionada);
@@ -54,33 +54,33 @@ main()
 
                 if (OfertaPedidaValida(numero_oferta_selecionada - 1))
                 {
-                    insert(numero_oferta_selecionada - 1);
+                    InserirPedidoNaFila(numero_oferta_selecionada - 1);
                 }
                 else
                     printf("Oferta selecionada invalida.\n");
                 break;
             case 2:
-                if(isEmpty())
+                if(FilaDePedidosVazia())
                 {
-                    printf("\nSem predidos\n");
+                    printf("\nSem pedidos\n");
                     break;
                 }
                 printf("Finalizando os pedidos:\n\n");
                 FinalizarPedidosEmFila();
                 break;
             case 3:
-                if(isEmpty())
+                if(FilaDePedidosVazia())
                 {
-                    printf("\nSem predidos\n");
+                    printf("\nSem pedidos\n");
                     break;
                 }
-                display();
+                ExibirPedidos();
                 printf("Selecione um pedido para cancela-lo:");
                 scanf("%d", &numero_pedido_selecionado);
                 RemoverPedidoSelecionado(numero_pedido_selecionado);
                 break;
             case 4:
-                display();
+                ExibirPedidos();
                 break;
             case 5:
                 exit(1);
@@ -151,36 +151,36 @@ bool OfertaPedidaValida(int numero_oferta_selecionada)
     return false;
 }
 
-void insert(int numero_oferta_selecionada)
+void InserirPedidoNaFila(int numero_oferta_selecionada)
 {
-    struct node *tmp;
-    tmp = (struct node *)malloc(sizeof(struct node));
+    struct node *novo_no;
+    novo_no = (struct node *)malloc(sizeof(struct node));
 
-    if(tmp==NULL)
+    if(novo_no == NULL)
     {
-        printf("Memory not available\n");
+        printf("Memoria Cheia\n");
         return;
     }
 
     ofertas[numero_oferta_selecionada].Quantidade--;
 
-    tmp->oferta_pedida = ofertas[numero_oferta_selecionada];
-    tmp->link=NULL;
+    novo_no->oferta_pedida = ofertas[numero_oferta_selecionada];
+    novo_no->link = NULL;
 
-    if(front==NULL)      /*If Queue is empty*/
-        front=tmp;
+    if(primeiro_no == NULL)     
+        primeiro_no=novo_no;
     else
-        rear->link = tmp; /*The above statement would link the the previous node to the newly created node*/
-    rear=tmp;
+        ultimo_no->link = novo_no; 
+    ultimo_no=novo_no;
 }
 
 void RemoverPedidoSelecionado(int numero_pedido_selecionado)
 {
-    struct node *curr, *bef, *tmp;
-    curr = bef = front;
+    struct node *no_atual, *no_anterior, *no_a_remover;
+    no_atual = no_anterior = primeiro_no;
     int i = 1;
 
-    if(isEmpty())
+    if(FilaDePedidosVazia())
     {
         printf("\nSem pedidos\n");
         return;
@@ -190,32 +190,32 @@ void RemoverPedidoSelecionado(int numero_pedido_selecionado)
     {
         if(i == numero_pedido_selecionado)
         {
-            tmp = curr;
-            bef->link = curr->link;
-            free(tmp);
+            no_a_remover = no_atual;
+            no_anterior->link = no_atual->link;
+            free(no_a_remover);
             break;
         }
-        bef = curr;
-        curr = curr->link;
+        no_anterior = no_atual;
+        no_atual = no_atual->link;
     }
 }
 
-int isEmpty()
+int FilaDePedidosVazia()
 {
-    if(front==NULL)
+    if(primeiro_no == NULL)
         return 1;
     else
         return 0;
 
 }
 
-void display()
+void ExibirPedidos()
 {
-    struct node *ptr;
-    ptr = front;
+    struct node *no_a_exibir;
+    no_a_exibir = primeiro_no;
     int i = 1;
 
-    if(isEmpty())
+    if(FilaDePedidosVazia())
     {
         printf("\nSem pedidos\n");
         return;
@@ -224,12 +224,12 @@ void display()
     printf("\n======= Pedidos =======\n");
 
 
-    while(ptr!=NULL)
+    while(no_a_exibir!=NULL)
     {
         printf("%d.", i);
-        printf("Nome: %s\n",ptr->oferta_pedida.Nome);
-        printf("Preco: %.2f\n",ptr->oferta_pedida.Preco);
-        ptr=ptr->link;
+        printf("Nome: %s\n",no_a_exibir->oferta_pedida.Nome);
+        printf("Preco: %.2f\n",no_a_exibir->oferta_pedida.Preco);
+        no_a_exibir = no_a_exibir->link;
         i++;
     }
 
@@ -238,19 +238,19 @@ void display()
 
 void FinalizarPedidosEmFila()
 {
-    struct node *tmp;
-    Oferta item;
+    struct node *no_a_finalizar;
+    Oferta pedido_finalizado;
     int i = 1;
 
-    while(!isEmpty())
+    while(!FilaDePedidosVazia())
     {
-        tmp = front;
-        item = tmp->oferta_pedida;
-        front = front->link;
-        free(tmp);
+        no_a_finalizar = primeiro_no;
+        pedido_finalizado = no_a_finalizar->oferta_pedida;
+        primeiro_no = primeiro_no->link;
+        free(no_a_finalizar);
 
-        printf("Pedido [%s] finalizado, seu voucher eh: ", item.Nome);
-        printf("%s", item.Codigo);
+        printf("Pedido [%s] finalizado, seu voucher eh: ", pedido_finalizado.Nome);
+        printf("%s", pedido_finalizado.Codigo);
         printf("%d\n", i);
 
         i++;
