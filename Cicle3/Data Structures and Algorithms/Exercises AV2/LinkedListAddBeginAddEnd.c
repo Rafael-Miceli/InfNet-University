@@ -209,42 +209,5 @@ int main()
                  printf("Wrong choice\n");
         }
     }
-
-    /*
-
-    for(i = 5; i<10; i++)
-        Add(i*2, true);
-
-    PrintList();
-
-    for(i = 4; i>0; i--)
-        Add(i, false);
-
-    PrintList();
-
-    for(i = 1; i<10; i+=4)
-    {
-        new_node = Find(i*2, NULL);
-
-        if(new_node == NULL)
-            printf("\n Search [val = %d] failed, no element found \n", i*2);
-        else
-            printf("\n Search passed [val = %d] \n", new_node->val);
-
-        PrintList();
-
-        ret = Delete(i*2);
-        if(ret != 0)
-            printf("\n Delete [val = %d] failed, no element found \n", i*2);
-        else
-            printf("\n Delete [val = %d] passed \n", i*2);
-
-        PrintList();
-
-        return 0;
-    }
-    PrintList();
-
-    */
 }
 
