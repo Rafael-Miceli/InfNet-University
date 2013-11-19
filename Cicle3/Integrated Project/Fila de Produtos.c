@@ -12,26 +12,32 @@ typedef struct{
 
 Oferta ofertas[4];
 
+//Está é a fila
+//========
 struct node
 {
     Oferta oferta_pedida;
     struct node *link;
 }*primeiro_no=NULL,*ultimo_no=NULL;
+//========
 
+//Esse são os "protótipos" dos métodos que contém neste arquivo
+//========
 void InserirPedidoNaFila(int numero_oferta_selecionada);
 void RemoverPedidoSelecionado(int numero_pedido_selecionado);
 int FilaDePedidosVazia();
 void ExibirPedidos();
 void ExibirOfertas();
 void CadastrarOfertas();
-bool OfertaPedidaValida(int numero_oferta_selecionada);
+bool OfertaPedidaForValida(int numero_oferta_selecionada);
 void FinalizarPedidosEmFila();
+//========
 
 main()
 {
     CadastrarOfertas();
 
-    int choice, numero_oferta_selecionada, numero_pedido_selecionado;
+    int opcao_escolhida, numero_oferta_selecionada, numero_pedido_selecionado;
     Oferta oferta_selecionada;
 
     while(1)
@@ -43,16 +49,18 @@ main()
         printf("5.Sair\n");
         printf("Selecione uma das opcoes anteriores: ");
 
-        scanf("%d", &choice);
+        scanf("%d", &opcao_escolhida);
 
-        switch(choice)
+        switch(opcao_escolhida)
         {
             case 1:
+			
                 ExibirOfertas();
+				
                 printf("\nSelecione uma oferta: ");
                 scanf("%d",&numero_oferta_selecionada);
 
-                if (OfertaPedidaValida(numero_oferta_selecionada - 1))
+                if (OfertaPedidaForValida(numero_oferta_selecionada - 1))
                 {
                     InserirPedidoNaFila(numero_oferta_selecionada - 1);
                 }
@@ -85,7 +93,7 @@ main()
             case 5:
                 exit(1);
             default :
-                printf("Wrong choice\n");
+                printf("Opcao incorreta\n");
         }
     }
 }
@@ -138,7 +146,8 @@ void ExibirOfertas()
     }
 }
 
-bool OfertaPedidaValida(int numero_oferta_selecionada)
+//Este método serve para o caso do usuário digitar o numero de alguma oferta que não existe
+bool OfertaPedidaForValida(int numero_oferta_selecionada)
 {
     if (numero_oferta_selecionada < 5 && numero_oferta_selecionada >= 0)
     {
@@ -154,23 +163,33 @@ bool OfertaPedidaValida(int numero_oferta_selecionada)
 void InserirPedidoNaFila(int numero_oferta_selecionada)
 {
     struct node *novo_no;
+	
+	//Cria um novo nó na fila
     novo_no = (struct node *)malloc(sizeof(struct node));
-
+	
+	//Se não conseguir criar o novo nó, significa que a memória esta com espaço cheio
     if(novo_no == NULL)
     {
         printf("Memoria Cheia\n");
         return;
     }
 
+	//Por estar adicionando uma oferta na fila de pedidos
+	//é preciso remover uma oferta do estoque (diminuir um da quantidade)
     ofertas[numero_oferta_selecionada].Quantidade--;
 
+	//Insere a oferta na fila
     novo_no->oferta_pedida = ofertas[numero_oferta_selecionada];
     novo_no->link = NULL;
 
+	//Como é uma fila aqui a verificação serve para o seguinte:
+	//Se o primeiro nó da fila for nulo, significa que é a primeira vez que esta sendo criado um nó na fila,
+	//Senão, significa que ja existe nó nessa fila, então, é criado um nó na última posição da fila
     if(primeiro_no == NULL)     
         primeiro_no=novo_no;
     else
         ultimo_no->link = novo_no; 
+		
     ultimo_no=novo_no;
 }
 
@@ -178,7 +197,7 @@ void RemoverPedidoSelecionado(int numero_pedido_selecionado)
 {
     struct node *no_atual, *no_anterior, *no_a_remover;
     no_atual = no_anterior = primeiro_no;
-    int i = 1;
+    int numero_do_pedido = 1;
 
     if(FilaDePedidosVazia())
     {
@@ -186,10 +205,13 @@ void RemoverPedidoSelecionado(int numero_pedido_selecionado)
         return;
     }
 
-    for(i; i <= numero_pedido_selecionado; i++)
+    for(numero_do_pedido; numero_do_pedido <= numero_pedido_selecionado; numero_do_pedido++)
     {
-        if(i == numero_pedido_selecionado)
+        if(numero_do_pedido == numero_pedido_selecionado)
         {
+			//Nesse momento, quando for remover um nó da fila é
+			//necessário, pegar o nó anterior e fazer ele apontar para o próximo
+			//Qualquer dúvida me mandem um E-mail
             no_a_remover = no_atual;
             no_anterior->link = no_atual->link;
             free(no_a_remover);
