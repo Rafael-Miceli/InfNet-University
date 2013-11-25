@@ -54,9 +54,9 @@ main()
         switch(opcao_escolhida)
         {
             case 1:
-			
+
                 ExibirOfertas();
-				
+
                 printf("\nSelecione uma oferta: ");
                 scanf("%d",&numero_oferta_selecionada);
 
@@ -163,10 +163,10 @@ bool OfertaPedidaForValida(int numero_oferta_selecionada)
 void InserirPedidoNaFila(int numero_oferta_selecionada)
 {
     struct node *novo_no;
-	
+
 	//Cria um novo nó na fila
     novo_no = (struct node *)malloc(sizeof(struct node));
-	
+
 	//Se não conseguir criar o novo nó, significa que a memória esta com espaço cheio
     if(novo_no == NULL)
     {
@@ -185,11 +185,11 @@ void InserirPedidoNaFila(int numero_oferta_selecionada)
 	//Como é uma fila aqui a verificação serve para o seguinte:
 	//Se o primeiro nó da fila for nulo, significa que é a primeira vez que esta sendo criado um nó na fila,
 	//Senão, significa que ja existe nó nessa fila, então, é criado um nó na última posição da fila
-    if(primeiro_no == NULL)     
+    if(primeiro_no == NULL)
         primeiro_no=novo_no;
     else
-        ultimo_no->link = novo_no; 
-		
+        ultimo_no->link = novo_no;
+
     ultimo_no=novo_no;
 }
 
@@ -209,13 +209,22 @@ void RemoverPedidoSelecionado(int numero_pedido_selecionado)
     {
         if(numero_do_pedido == numero_pedido_selecionado)
         {
-			//Nesse momento, quando for remover um nó da fila é
-			//necessário, pegar o nó anterior e fazer ele apontar para o próximo
-			//Qualquer dúvida me mandem um E-mail
-            no_a_remover = no_atual;
-            no_anterior->link = no_atual->link;
-            free(no_a_remover);
-            break;
+            if(no_atual == primeiro_no)
+            {
+                primeiro_no = primeiro_no->link;
+                free(no_atual);
+            }
+            else
+            {
+                //Nesse momento, quando for remover um nó da fila é
+                //necessário, pegar o nó anterior e fazer ele apontar para o próximo
+                //Qualquer dúvida me mandem um E-mail
+                no_a_remover = no_atual;
+                no_anterior->link = no_atual->link;
+                free(no_a_remover);
+                break;
+            }
+
         }
         no_anterior = no_atual;
         no_atual = no_atual->link;
