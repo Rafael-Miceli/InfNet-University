@@ -18,6 +18,8 @@ public class Cozinheiro implements Runnable {
 				System.out.println("Deu erro");
 			}
 		}
+
+        porcoes.setServindo(false);
         //notify();
 	}
 

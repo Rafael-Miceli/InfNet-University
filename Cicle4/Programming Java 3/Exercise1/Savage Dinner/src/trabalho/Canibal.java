@@ -12,8 +12,8 @@ public class Canibal implements Runnable {
 	public void run() {
 
 		try {
-			porcoes.get();
-            System.out.println();
+            for (int i = 0; i < 35; i++)
+			    porcoes.get();
 		} catch (InterruptedException e) {
 			System.out.println("Deu erro");
 		}
