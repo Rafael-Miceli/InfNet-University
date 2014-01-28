@@ -39,24 +39,24 @@ public class Porcoes{
 	}
 	
     public synchronized int get()throws InterruptedException{
-    	
-    	while(porcoes.isEmpty() || servindo){
-    		System.out.println("Espere uma porção");
-            System.out.println("Canibal : " + Thread.currentThread().getId());
-            servindo = true;
-    		wait();
-    	}
 
-        comendo = true;
-        int porcao = porcoes.remove();
-        System.out.println("Comeu porcao : " + porcao);
+    while(porcoes.isEmpty() || servindo){
+        System.out.println("Espere uma porção");
         System.out.println("Canibal : " + Thread.currentThread().getId());
+        servindo = true;
+        wait();
+    }
 
-        notify();
+    comendo = true;
+    int porcao = porcoes.remove();
+    System.out.println("Comeu porcao : " + porcao);
+    System.out.println("Canibal : " + Thread.currentThread().getId());
 
-		return porcao;		
-	}
-	
+    notify();
+
+    return porcao;
+}
+
 	
 	
 	
