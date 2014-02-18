@@ -1,4 +1,6 @@
+import javax.swing.*;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -9,16 +11,21 @@ public class Cliente {
 
         //1. REALIZAR UMA CONEXÃO COM O SERVIDOR
         try {
-            Socket socket = new Socket("host", 1000);
+            Socket s = new Socket("CSD016W", 1000);
 
             //2. RECEBER MSGS - DELEGAR PARA UMA THREAD
-            RecebeMsgThread reciver = new RecebeMsgThread(socket);
+            RecebeMsgThread reciver = new RecebeMsgThread(s);
             reciver.start();
 
             while(true){
                 //3. LER DO TECLADO
+                String input = JOptionPane.showInputDialog("Mensagem");
 
                 //4. ENVIA PARA O SERVIDOR
+                ObjectOutputStream saida = new ObjectOutputStream(s.getOutputStream());
+
+                saida.writeObject(input);
+                saida.flush();
             }
 
         } catch (UnknownHostException e) {

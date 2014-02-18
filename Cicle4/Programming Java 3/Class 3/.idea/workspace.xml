@@ -4,9 +4,11 @@
     <list default="true" id="dd59d606-99ed-4b13-8aee-13771f78dc00" name="Default" comment="" />
     <ignored path="InfnetPJava3.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BroadcastThread.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392726833669" ignored="false" />
-    <file path="/Principal.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392736285473" ignored="false" />
+    <file path="/BroadcastThread.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392747878555" ignored="false" />
+    <file path="/Principal.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392739250288" ignored="false" />
     <file path="/Servidor.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392736363569" ignored="false" />
+    <file path="/Cliente.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392748418369" ignored="false" />
+    <file path="/RecebeMsgThread.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392748593450" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +73,7 @@
       <file leaf-file-name="Cliente.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
+            <state line="24" column="77" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,8 +82,10 @@
       <file leaf-file-name="RecebeMsgThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RecebeMsgThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="13" column="48" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,37 +93,17 @@
       <file leaf-file-name="Servidor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="47" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+            <state line="18" column="74" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BroadcastThread.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BroadcastThread.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BroadcastThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="57" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="42" column="38" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.6530612">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Servidor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Class3/src/Servidor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="66" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Principal.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Class3/src/Principal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="75" selection-start="612" selection-end="612" vertical-scroll-proportion="0.4007421">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -134,12 +118,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/RecebeMsgThread.java" />
-        <option value="$PROJECT_DIR$/src/Cliente.java" />
         <option value="$PROJECT_DIR$/src/Servidor.java" />
-        <option value="$PROJECT_DIR$/src/BroadcastThread.java" />
-        <option value="$PROJECT_DIR$/Class3/src/Servidor.java" />
         <option value="$PROJECT_DIR$/Class3/src/Principal.java" />
+        <option value="$PROJECT_DIR$/src/Cliente.java" />
+        <option value="$PROJECT_DIR$/src/RecebeMsgThread.java" />
+        <option value="$PROJECT_DIR$/Class3/src/Servidor.java" />
+        <option value="$PROJECT_DIR$/src/BroadcastThread.java" />
       </list>
     </option>
   </component>
@@ -260,9 +244,9 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Principal">
-    <configuration default="false" name="Servidor" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Servidor" />
+  <component name="RunManager" selected="Application.Cliente">
+    <configuration default="false" name="Principal" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Principal" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -283,8 +267,8 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Principal" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Principal" />
+    <configuration default="false" name="Servidor" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Servidor" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -293,15 +277,25 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Class3" />
+      <module name="Class 3" />
       <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Cliente" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Cliente" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Class 3" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -393,14 +387,17 @@
       <patterns />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.Servidor" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Principal" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.Principal" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Servidor" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Cliente" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Principal" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.Cliente" />
         <item index="1" class="java.lang.String" itemvalue="Application.Servidor" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Principal" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Servidor" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -418,8 +415,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -435,7 +432,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24230146" sideWeight="0.6702254" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -518,7 +515,9 @@
     <entry file="file://$PROJECT_DIR$/src/RecebeMsgThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -557,47 +556,49 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
+    <entry file="file://$PROJECT_DIR$/Class3/src/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="37" column="52" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RecebeMsgThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="13" column="48" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BroadcastThread.java">
+    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="57" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="47" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+        <state line="24" column="77" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Class3/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="66" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+        <state line="25" column="60" selection-start="685" selection-end="685" vertical-scroll-proportion="0.526616">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class3/src/Principal.java">
+    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="75" selection-start="612" selection-end="612" vertical-scroll-proportion="0.4007421">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="18" column="74" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BroadcastThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="38" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.6530612">
+          <folding />
         </state>
       </provider>
     </entry>

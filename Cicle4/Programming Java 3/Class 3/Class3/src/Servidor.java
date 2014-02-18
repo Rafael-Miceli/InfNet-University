@@ -23,7 +23,7 @@ public class Servidor {
 
                 ObjectOutputStream saida = new ObjectOutputStream(socket.getOutputStream());
 
-                saida.writeObject("Mensagem vinda do cliente: " + socket.getInetAddress() + "\n" + msgCliente + "\nmensagem enviada pela rede!!!");
+                saida.writeObject("Mensagem vinda do cliente " + socket.getInetAddress() + "  " + msgCliente + "\nmensagem enviada pela rede!!!");
                 saida.flush();
 
                 saida.close();

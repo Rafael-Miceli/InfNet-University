@@ -15,11 +15,10 @@ public class Principal {
         try {
 
             String input = JOptionPane.showInputDialog("Mensagem");
-            while(input != "Fim") {
+            while(!input.equals("Fim")) {
 
                 InetAddress ia = InetAddress.getByName("CSD016W");
                 Socket s = new Socket (ia, 1000);
-
 
                 ObjectOutputStream saida = new ObjectOutputStream(s.getOutputStream());
 
