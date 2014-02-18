@@ -11,25 +11,40 @@ public class Servidor {
 
         try {
             ServerSocket s = new ServerSocket(1000);
-            Socket socket = s.accept();
 
-            ObjectInputStream entrada = new ObjectInputStream(socket.getInputStream());
+            while (true) {
 
-            ObjectOutputStream saida = new ObjectOutputStream(socket.getOutputStream());
+                Socket socket = s.accept();
 
-            saida.writeUTF("Mensagem vinda do cliente: " + socket.getInetAddress());
-            saida.writeObject(entrada.readUTF());
+
+                ObjectInputStream entrada = new ObjectInputStream(socket.getInputStream());
+
+                String msgCliente =   entrada.readObject().toString();
+
+                ObjectOutputStream saida = new ObjectOutputStream(socket.getOutputStream());
+
+                saida.writeObject("Mensagem vinda do cliente: " + socket.getInetAddress() + "\n" + msgCliente + "\nmensagem enviada pela rede!!!");
+                saida.flush();
+
+                saida.close();
+                socket.close();
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+         /*
+            saida.writeObject(msgCliente);
+            saida.flush();
 
             saida.writeObject("mensagem enviada pela rede!!!");
             saida.flush();
-            saida.close();
-            socket.close();
-
-            System.out.println("conectado!!!");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            */
+        //System.out.println("conectado!!!");
     }
 
 }
