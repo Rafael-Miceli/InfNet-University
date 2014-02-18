@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -12,7 +13,12 @@ public class Servidor {
             ServerSocket s = new ServerSocket(1000);
             Socket socket = s.accept();
 
+            ObjectInputStream entrada = new ObjectInputStream(socket.getInputStream());
+
             ObjectOutputStream saida = new ObjectOutputStream(socket.getOutputStream());
+
+            saida.writeUTF("Mensagem vinda do cliente: " + socket.getInetAddress());
+            saida.writeObject(entrada.readUTF());
 
             saida.writeObject("mensagem enviada pela rede!!!");
             saida.flush();
