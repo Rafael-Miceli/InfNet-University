@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
+import java.util.Scanner;
 
 
 public class RecebeMsgThread extends Thread {
@@ -14,21 +15,21 @@ public class RecebeMsgThread extends Thread {
     public void run(){
 
 
-        ObjectInputStream entrada = null;
         try {
 
             //1. LER DO SOCKET
-            entrada = new ObjectInputStream(_socket.getInputStream());
-            String msg = entrada.readObject().toString();
+            Scanner s = new Scanner(_socket.getInputStream());
+            while(s.hasNextLine())
+            {
+                String msg = s.nextLine();
 
-            //2. IMPRIMIR NO CONSOLE
-            System.out.println(msg);
+                //2. IMPRIMIR NO CONSOLE
+                System.out.println(msg);
+
+            }
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-
     }
 
 }

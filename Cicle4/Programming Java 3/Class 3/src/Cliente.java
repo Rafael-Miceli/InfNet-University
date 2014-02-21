@@ -1,8 +1,10 @@
 import javax.swing.*;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.PrintStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 
 public class Cliente {
@@ -11,19 +13,22 @@ public class Cliente {
 
         //1. REALIZAR UMA CONEXÃO COM O SERVIDOR
         try {
-            Socket s = new Socket("CSD016W", 1000);
-            ObjectOutputStream saida = new ObjectOutputStream(s.getOutputStream());
+            Socket s = new Socket("localhost", 1000);
+            PrintStream saida = new PrintStream(s.getOutputStream());
 
             //2. RECEBER MSGS - DELEGAR PARA UMA THREAD
             RecebeMsgThread reciver = new RecebeMsgThread(s);
             reciver.start();
 
-            while(true){
+
+            Scanner sc = new Scanner(System.in);
+
+            while(sc.hasNextLine()){
                 //3. LER DO TECLADO
-                String input = JOptionPane.showInputDialog("Mensagem");
+                String input = sc.nextLine();
 
                 //4. ENVIA PARA O SERVIDOR
-                saida.writeObject(input);
+                saida.println(input);
             }
 
         } catch (UnknownHostException e) {

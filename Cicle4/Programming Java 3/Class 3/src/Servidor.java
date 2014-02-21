@@ -9,14 +9,14 @@ public class Servidor {
 
     public static void main(String[] args) {
 
-        ArrayList<PrintStream> listaBroadcast = new ArrayList<PrintStream>();
+        ArrayList<Socket> listaBroadcast = new ArrayList<Socket>();
 
         //Aceita a conexão
         try {
             ServerSocket server = new ServerSocket(1000);
             while(true){
                 Socket socket = server.accept();
-                listaBroadcast.add(new PrintStream(socket.getOutputStream()));
+                listaBroadcast.add(socket);
 
                 //Tratamento do recebimento de msg e distribuição
                 //AQUI EU DELEGO PARA THREAD
