@@ -13,21 +13,20 @@ public class RecebeMsgThread extends Thread {
 
     public void run(){
 
-        while(true){
-            //1. LER DO SOCKET
-            ObjectInputStream entrada = null;
-            try {
-                entrada = new ObjectInputStream(_socket.getInputStream());
-                String msg = entrada.readObject().toString();
-                System.out.println(msg);
-            } catch (IOException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
 
+        ObjectInputStream entrada = null;
+        try {
+
+            //1. LER DO SOCKET
+            entrada = new ObjectInputStream(_socket.getInputStream());
+            String msg = entrada.readObject().toString();
 
             //2. IMPRIMIR NO CONSOLE
+            System.out.println(msg);
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
     }

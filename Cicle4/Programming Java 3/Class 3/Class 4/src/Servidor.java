@@ -20,7 +20,8 @@ public class Servidor {
 
                 //Tratamento do recebimento de msg e distribuição
                 //AQUI EU DELEGO PARA THREAD
-                BroadcastThread thread = new BroadcastThread(socket, listaBroadcast);
+                BroadcastThread thread =
+                        new BroadcastThread(socket, listaBroadcast);
                 thread.start();
             }
         } catch (IOException e) {

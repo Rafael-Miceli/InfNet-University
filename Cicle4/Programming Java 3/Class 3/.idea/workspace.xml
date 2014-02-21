@@ -4,9 +4,9 @@
     <list default="true" id="dd59d606-99ed-4b13-8aee-13771f78dc00" name="Default" comment="" />
     <ignored path="InfnetPJava3.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/BroadcastThread.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392747878555" ignored="false" />
+    <file path="/BroadcastThread.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1393003525589" ignored="false" />
     <file path="/Principal.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392739250288" ignored="false" />
-    <file path="/Servidor.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392736363569" ignored="false" />
+    <file path="/Servidor.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1393004118153" ignored="false" />
     <file path="/Cliente.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392748418369" ignored="false" />
     <file path="/RecebeMsgThread.java" changelist="dd59d606-99ed-4b13-8aee-13771f78dc00" time="1392748593450" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +23,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -60,7 +59,39 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/Class 4/src/RecebeMsgThread.java" line="10" class="RecebeMsgThread" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Class 4/src/RecebeMsgThread.java" line="16" class="RecebeMsgThread" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -70,10 +101,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="BroadcastThread.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BroadcastThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="13" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Servidor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servidor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="45" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#272#285#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Cliente.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="77" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+            <state line="21" column="42" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,7 +133,16 @@
       <file leaf-file-name="RecebeMsgThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RecebeMsgThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="48" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Principal.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Class3/src/Principal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="58" selection-start="527" selection-end="527" vertical-scroll-proportion="0.250918">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,18 +151,9 @@
         </entry>
       </file>
       <file leaf-file-name="Servidor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Servidor.java">
+        <entry file="file://$PROJECT_DIR$/Class3/src/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="74" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BroadcastThread.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BroadcastThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="38" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.6530612">
+            <state line="24" column="34" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,12 +169,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Servidor.java" />
         <option value="$PROJECT_DIR$/Class3/src/Principal.java" />
+        <option value="$PROJECT_DIR$/Class 4/src/Servidor.java" />
+        <option value="$PROJECT_DIR$/Class 4/src/BroadcastThread.java" />
+        <option value="$PROJECT_DIR$/Class 4/src/Cliente.java" />
+        <option value="$PROJECT_DIR$/Class 4/src/RecebeMsgThread.java" />
+        <option value="$PROJECT_DIR$/src/Servidor.java" />
+        <option value="$PROJECT_DIR$/src/BroadcastThread.java" />
         <option value="$PROJECT_DIR$/src/Cliente.java" />
         <option value="$PROJECT_DIR$/src/RecebeMsgThread.java" />
         <option value="$PROJECT_DIR$/Class3/src/Servidor.java" />
-        <option value="$PROJECT_DIR$/src/BroadcastThread.java" />
       </list>
     </option>
   </component>
@@ -159,8 +214,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -189,7 +242,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InfnetPJava3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Class 3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Class 4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InfnetPJava3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Class 3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Class 4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -227,6 +312,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,11 +327,11 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Cliente">
+  <component name="RunManager" selected="Application.Principal">
     <configuration default="false" name="Principal" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Principal" />
       <option name="VM_PARAMETERS" />
@@ -267,8 +354,8 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Servidor" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Servidor" />
+    <configuration default="false" name="Cliente" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Cliente" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -283,8 +370,8 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Cliente" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Cliente" />
+    <configuration default="false" name="Servidor" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Servidor" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -293,7 +380,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Class 3" />
+      <module name="Class3" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -389,15 +476,16 @@
     </configuration>
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Principal" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Servidor" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Cliente" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Cliente" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Servidor" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Cliente" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Principal" />
         <item index="1" class="java.lang.String" itemvalue="Application.Servidor" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Principal" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Cliente" />
         <item index="3" class="java.lang.String" itemvalue="Application.Servidor" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Cliente" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -415,7 +503,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -505,26 +593,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RecebeMsgThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="47" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#272#285#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,49 +637,86 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class3/src/Principal.java">
+    <entry file="file://$PROJECT_DIR$/Class 4/src/BroadcastThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="52" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
+        <state line="16" column="68" selection-start="484" selection-end="484" vertical-scroll-proportion="0.33292535">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RecebeMsgThread.java">
+    <entry file="file://$PROJECT_DIR$/Class 4/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0">
+        <state line="18" column="0" selection-start="463" selection-end="463" vertical-scroll-proportion="0.374541">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#272#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class 4/src/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="20" selection-start="558" selection-end="558" vertical-scroll-proportion="0.374541">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class 4/src/RecebeMsgThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.22888617">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BroadcastThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="13" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="77" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class3/src/Servidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="60" selection-start="685" selection-end="685" vertical-scroll-proportion="0.526616">
+        <state line="21" column="42" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="74" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
+        <state line="27" column="45" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#272#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RecebeMsgThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BroadcastThread.java">
+    <entry file="file://$PROJECT_DIR$/Class3/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="38" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.6530612">
+        <state line="24" column="34" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class3/src/Principal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="58" selection-start="527" selection-end="527" vertical-scroll-proportion="0.250918">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

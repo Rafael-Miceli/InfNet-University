@@ -12,6 +12,7 @@ public class Cliente {
         //1. REALIZAR UMA CONEXÃO COM O SERVIDOR
         try {
             Socket s = new Socket("CSD016W", 1000);
+            ObjectOutputStream saida = new ObjectOutputStream(s.getOutputStream());
 
             //2. RECEBER MSGS - DELEGAR PARA UMA THREAD
             RecebeMsgThread reciver = new RecebeMsgThread(s);
@@ -22,10 +23,7 @@ public class Cliente {
                 String input = JOptionPane.showInputDialog("Mensagem");
 
                 //4. ENVIA PARA O SERVIDOR
-                ObjectOutputStream saida = new ObjectOutputStream(s.getOutputStream());
-
                 saida.writeObject(input);
-                saida.flush();
             }
 
         } catch (UnknownHostException e) {

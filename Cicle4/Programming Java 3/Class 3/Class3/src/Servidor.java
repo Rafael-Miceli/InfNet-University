@@ -13,10 +13,10 @@ public class Servidor {
             ServerSocket s = new ServerSocket(1000);
 
             while (true) {
-
+                //Aguarda entrada de um cliente
                 Socket socket = s.accept();
 
-
+                //
                 ObjectInputStream entrada = new ObjectInputStream(socket.getInputStream());
 
                 String msgCliente =   entrada.readObject().toString();
