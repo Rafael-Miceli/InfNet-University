@@ -9,18 +9,23 @@ public class Servidor {
 
     public static void main(String[] args) {
 
-        ArrayList<Socket> listaBroadcast = new ArrayList<Socket>();
+        ArrayList<SocketCliente> listaBroadcast = new ArrayList<SocketCliente>();
 
         //Aceita a conexão
         try {
             ServerSocket server = new ServerSocket(1000);
+
             while(true){
                 Socket socket = server.accept();
-                listaBroadcast.add(socket);
+
+                SocketCliente socketCliente = new SocketCliente();
+                socketCliente.setSocket(socket);
+
+                listaBroadcast.add(socketCliente);
 
                 //Tratamento do recebimento de msg e distribuição
                 //AQUI EU DELEGO PARA THREAD
-                BroadcastThread thread = new BroadcastThread(socket, listaBroadcast);
+                BroadcastThread thread = new BroadcastThread(socketCliente, listaBroadcast);
                 thread.start();
             }
         } catch (IOException e) {

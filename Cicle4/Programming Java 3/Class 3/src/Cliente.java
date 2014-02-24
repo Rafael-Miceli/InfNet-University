@@ -23,9 +23,19 @@ public class Cliente {
 
             Scanner sc = new Scanner(System.in);
 
+            String nick = null;
+            System.out.println("Digite seu nickName: \n");
+
             while(sc.hasNextLine()){
                 //3. LER DO TECLADO
+                //if (nick != null)
+                //    System.out.print(nick + ": ");
+
                 String input = sc.nextLine();
+
+                //if (nick == null)
+                //    nick = input;
+
 
                 //4. ENVIA PARA O SERVIDOR
                 saida.println(input);

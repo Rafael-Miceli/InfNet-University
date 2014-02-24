@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class BroadcastThread extends Thread {
 
-    private ArrayList<PrintStream> listaBroadcast;
+    private ArrayList<Socket> listaBroadcast;
 
     private Socket conexaoLeitura;
 
     public BroadcastThread(	Socket conexaoLeitura,
-                               ArrayList<PrintStream> listaBroadcast){
+                               ArrayList<Socket> listaBroadcast){
 
         this.conexaoLeitura = conexaoLeitura;
         this.listaBroadcast = listaBroadcast;
@@ -27,9 +27,9 @@ public class BroadcastThread extends Thread {
                 String msg = s.nextLine();
 
                 //PASSO 2: REALIZAR O BROADCAST
-                for (PrintStream ps : listaBroadcast) {
-                    ps.println(msg);
-                }
+                //for (PrintStream ps : listaBroadcast) {
+                //    ps.println(msg);
+                //}
             }
         } catch (IOException e) {
             e.printStackTrace();
