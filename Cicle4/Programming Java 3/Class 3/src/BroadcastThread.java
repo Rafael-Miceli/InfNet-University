@@ -9,13 +9,13 @@ import java.util.Scanner;
 public class BroadcastThread extends Thread {
 
     private ArrayList<SocketCliente> _listaBroadcast;
-
     private SocketCliente _conexaoLeitura;
+    private RepositorioClienteSocket _repositorioClienteSocket;
 
-    public BroadcastThread(	SocketCliente conexaoLeitura, ArrayList<SocketCliente> listaBroadcast){
+    public BroadcastThread(	SocketCliente conexaoLeitura, RepositorioClienteSocket repositorioClienteSocket){
 
         _conexaoLeitura = conexaoLeitura;
-        _listaBroadcast = listaBroadcast;
+        _repositorioClienteSocket = repositorioClienteSocket;
 
     }
 
@@ -39,7 +39,7 @@ public class BroadcastThread extends Thread {
                 {
                     _conexaoLeitura.setNickName(message);
 
-                    for (SocketCliente cliente : _listaBroadcast){
+                    for (SocketCliente cliente : _repositorioClienteSocket.GetSockets()){
                         if (cliente.getSocket().getInetAddress() == _conexaoLeitura.getSocket().getInetAddress())
                         {
                             cliente.setNickName(_conexaoLeitura.getNickName());
@@ -53,7 +53,7 @@ public class BroadcastThread extends Thread {
                 else
                 {
                     //REALIZANDO O BROADCAST COM O APELIDO
-                    for (SocketCliente cliente : _listaBroadcast){
+                    for (SocketCliente cliente : _repositorioClienteSocket.GetSockets()){
                         if (cliente.getSocket().getInetAddress() == _conexaoLeitura.getSocket().getInetAddress())
                             continue;
 
@@ -63,9 +63,9 @@ public class BroadcastThread extends Thread {
                         catch (IOException e) {
 
                             String exitMessage = "\n" + cliente.getNickName() + " saiu da conversa";
-                            _listaBroadcast.remove(cliente);
+                            _repositorioClienteSocket.RemoverSocket(cliente);
 
-                            for (SocketCliente clienteSaida : _listaBroadcast){
+                            for (SocketCliente clienteSaida : _repositorioClienteSocket.GetSockets()){
                                 PrintStream ps = new PrintStream(clienteSaida.getSocket().getOutputStream());
                                 ps.println(exitMessage);
                             }
@@ -80,7 +80,6 @@ public class BroadcastThread extends Thread {
             }
 
         } catch (IOException e) {
-            System.out.println("Alguem se desconectou");
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
