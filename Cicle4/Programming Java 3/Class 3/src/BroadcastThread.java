@@ -29,6 +29,8 @@ public class BroadcastThread extends Thread {
 
             Scanner entrada = new Scanner(_conexaoLeitura.getSocket().getInputStream());
 
+            ArrayList<SocketCliente> Clientes = _repositorioClienteSocket.GetSockets();
+
             while(entrada.hasNextLine())
             {
                 //LENDO DO SOCKET
@@ -39,7 +41,7 @@ public class BroadcastThread extends Thread {
                 {
                     _conexaoLeitura.setNickName(message);
 
-                    for (SocketCliente cliente : _repositorioClienteSocket.GetSockets()){
+                    for (SocketCliente cliente : Clientes){
                         if (cliente.getSocket().getInetAddress() == _conexaoLeitura.getSocket().getInetAddress())
                         {
                             cliente.setNickName(_conexaoLeitura.getNickName());
@@ -52,8 +54,10 @@ public class BroadcastThread extends Thread {
                 }
                 else
                 {
+
+
                     //REALIZANDO O BROADCAST COM O APELIDO
-                    for (SocketCliente cliente : _repositorioClienteSocket.GetSockets()){
+                    for (SocketCliente cliente : Clientes){
                         if (cliente.getSocket().getInetAddress() == _conexaoLeitura.getSocket().getInetAddress())
                             continue;
 
