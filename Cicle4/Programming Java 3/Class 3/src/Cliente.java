@@ -1,7 +1,5 @@
 import javax.swing.*;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
@@ -31,8 +29,31 @@ public class Cliente {
                 String input = sc.nextLine();
 
                 //4. ENVIA PARA O SERVIDOR
-                saida.println(input);
+                if (input.startsWith("@")){
+                    System.out.println("Enviando arquivo no caminho " + input.substring(1, input.length()));
+
+                    File file = new File(input.substring(1, input.length()));
+
+                    long length = file.length();
+                    if (length > Integer.MAX_VALUE) {
+                        System.out.println("Arquivo muito grande.");
+                    }
+                    byte[] bytes = new byte[(int) length];
+                    FileInputStream fis = new FileInputStream(file);
+                    BufferedInputStream bis = new BufferedInputStream(fis);
+                    BufferedOutputStream out = new BufferedOutputStream(s.getOutputStream());
+
+                    int count;
+
+                    while ((count = bis.read(bytes)) > 0) {
+                        out.write(bytes, 0, count);
+                    }
+                }
+                else{
+                    saida.println(input);
+                }
             }
+
 
         } catch (UnknownHostException e) {
             e.printStackTrace();

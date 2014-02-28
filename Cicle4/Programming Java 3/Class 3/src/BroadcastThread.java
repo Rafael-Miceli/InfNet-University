@@ -1,7 +1,4 @@
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -24,6 +21,10 @@ public class BroadcastThread extends Thread {
 
 
         String message = "";
+        InputStream is = null;
+        FileOutputStream fos = null;
+        BufferedOutputStream bos = null;
+        int bufferSize = 0;
 
         try {
 
@@ -36,6 +37,14 @@ public class BroadcastThread extends Thread {
                 //LENDO DO SOCKET
                 message = entrada.nextLine();
                 System.out.println(message);
+                System.out.println(message.toString());
+                System.out.println(message.toString().isEmpty());
+
+
+                is = _conexaoLeitura.getSocket().getInputStream();
+                bufferSize = _conexaoLeitura.getSocket().getReceiveBufferSize();
+
+                System.out.println(is.read());
 
                 if (_conexaoLeitura.getNickName() == null || _conexaoLeitura.getNickName() == "")
                 {
@@ -55,30 +64,61 @@ public class BroadcastThread extends Thread {
                 else
                 {
 
-
                     //REALIZANDO O BROADCAST COM O APELIDO
                     for (SocketCliente cliente : Clientes){
                         if (cliente.getSocket().getInetAddress() == _conexaoLeitura.getSocket().getInetAddress())
                             continue;
 
-                        try {
-                            cliente.getSocket().getOutputStream().write(1);
-                        }
-                        catch (IOException e) {
+                        if (message.isEmpty()) {
 
-                            String exitMessage = "\n" + cliente.getNickName() + " saiu da conversa";
-                            _repositorioClienteSocket.RemoverSocket(cliente);
+                            try {
+                                is = _conexaoLeitura.getSocket().getInputStream();
 
-                            for (SocketCliente clienteSaida : _repositorioClienteSocket.GetSockets()){
-                                PrintStream ps = new PrintStream(clienteSaida.getSocket().getOutputStream());
-                                ps.println(exitMessage);
+                                bufferSize = _conexaoLeitura.getSocket().getReceiveBufferSize();
+                                System.out.println("Buffer size: " + bufferSize);
+
+                                try {
+                                    fos = new FileOutputStream("C:\\Users\\rafael.miceli\\Downloads\\test2.txt");
+                                    bos = new BufferedOutputStream(fos);
+
+                                    byte[] bytes = new byte[bufferSize];
+
+                                    int count;
+
+                                    while ((count = is.read(bytes)) > 0) {
+                                        bos.write(bytes, 0, count);
+                                    }
+
+                                    bos.flush();
+                                    bos.close();
+
+                                } catch (FileNotFoundException ex) {
+                                    System.out.println("File not found. ");
+                                }
+                            } catch (IOException ex) {
+                                System.out.println("Can't get socket input stream. ");
                             }
 
-                            continue;
-                        }
+                            try {
+                                cliente.getSocket().getOutputStream().write(1);
+                            }
+                            catch (IOException e) {
 
-                        PrintStream ps = new PrintStream(cliente.getSocket().getOutputStream());
-                        ps.println(_conexaoLeitura.getNickName() + ": " + message);
+                                String exitMessage = "\n" + cliente.getNickName() + " saiu da conversa";
+                                _repositorioClienteSocket.RemoverSocket(cliente);
+
+                                for (SocketCliente clienteSaida : _repositorioClienteSocket.GetSockets()){
+                                    PrintStream ps = new PrintStream(clienteSaida.getSocket().getOutputStream());
+                                    ps.println(exitMessage);
+                                }
+
+                                continue;
+                            }
+                        }
+                        else{
+                            PrintStream ps = new PrintStream(cliente.getSocket().getOutputStream());
+                            ps.println(_conexaoLeitura.getNickName() + ": " + message);
+                        }
                     }
                 }
             }
