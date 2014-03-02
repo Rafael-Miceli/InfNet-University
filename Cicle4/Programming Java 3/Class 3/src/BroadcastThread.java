@@ -37,14 +37,14 @@ public class BroadcastThread extends Thread {
                 //LENDO DO SOCKET
                 message = entrada.nextLine();
                 System.out.println(message);
-                System.out.println(message.toString());
-                System.out.println(message.toString().isEmpty());
+                //System.out.println(message.toString());
+                //System.out.println(message.toString().isEmpty());
 
 
-                is = _conexaoLeitura.getSocket().getInputStream();
-                bufferSize = _conexaoLeitura.getSocket().getReceiveBufferSize();
+                //is = _conexaoLeitura.getSocket().getInputStream();
+                //bufferSize = _conexaoLeitura.getSocket().getReceiveBufferSize();
 
-                System.out.println(is.read());
+                //System.out.println(is.read());
 
                 if (_conexaoLeitura.getNickName() == null || _conexaoLeitura.getNickName() == "")
                 {
@@ -69,16 +69,16 @@ public class BroadcastThread extends Thread {
                         if (cliente.getSocket().getInetAddress() == _conexaoLeitura.getSocket().getInetAddress())
                             continue;
 
-                        if (message.isEmpty()) {
+                        //if (message.isEmpty()) {
 
-                            try {
+                            /*try {
                                 is = _conexaoLeitura.getSocket().getInputStream();
 
                                 bufferSize = _conexaoLeitura.getSocket().getReceiveBufferSize();
                                 System.out.println("Buffer size: " + bufferSize);
 
                                 try {
-                                    fos = new FileOutputStream("C:\\Users\\rafael.miceli\\Downloads\\test2.txt");
+                                    fos = new FileOutputStream("C:\\Users\\Rafael\\Downloads\\test2.txt");
                                     bos = new BufferedOutputStream(fos);
 
                                     byte[] bytes = new byte[bufferSize];
@@ -90,14 +90,13 @@ public class BroadcastThread extends Thread {
                                     }
 
                                     bos.flush();
-                                    bos.close();
 
                                 } catch (FileNotFoundException ex) {
                                     System.out.println("File not found. ");
                                 }
                             } catch (IOException ex) {
                                 System.out.println("Can't get socket input stream. ");
-                            }
+                            }*/
 
                             try {
                                 cliente.getSocket().getOutputStream().write(1);
@@ -114,11 +113,11 @@ public class BroadcastThread extends Thread {
 
                                 continue;
                             }
-                        }
-                        else{
+                        //}
+                        //else{
                             PrintStream ps = new PrintStream(cliente.getSocket().getOutputStream());
                             ps.println(_conexaoLeitura.getNickName() + ": " + message);
-                        }
+                        //}
                     }
                 }
             }

@@ -29,7 +29,7 @@ public class Cliente {
                 String input = sc.nextLine();
 
                 //4. ENVIA PARA O SERVIDOR
-                if (input.startsWith("@")){
+                /*if (input.startsWith("@")){
                     System.out.println("Enviando arquivo no caminho " + input.substring(1, input.length()));
 
                     File file = new File(input.substring(1, input.length()));
@@ -48,10 +48,10 @@ public class Cliente {
                     while ((count = bis.read(bytes)) > 0) {
                         out.write(bytes, 0, count);
                     }
-                }
-                else{
+                }*/
+                //else{
                     saida.println(input);
-                }
+                //}
             }
 
 
