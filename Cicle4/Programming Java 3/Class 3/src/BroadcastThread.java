@@ -37,14 +37,7 @@ public class BroadcastThread extends Thread {
                 //LENDO DO SOCKET
                 message = entrada.nextLine();
                 System.out.println(message);
-                //System.out.println(message.toString());
-                //System.out.println(message.toString().isEmpty());
 
-
-                //is = _conexaoLeitura.getSocket().getInputStream();
-                //bufferSize = _conexaoLeitura.getSocket().getReceiveBufferSize();
-
-                //System.out.println(is.read());
 
                 if (_conexaoLeitura.getNickName() == null || _conexaoLeitura.getNickName() == "")
                 {
