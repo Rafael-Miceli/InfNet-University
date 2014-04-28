@@ -1,0 +1,20 @@
+User Stories:
+
+As an user, I want to have a login area, so I don't need to validate my credentials all the time
+As an user, I want to see other promotions plus the deal of the day in the home page
+As an user, I want to have a list of states to select in the home page
+As an user, I want to have a menu of categories, so I can choose a category to navigate
+As an user, I want to have a search box, so I can find the deal I'm quering
+As an user, I want to see the details about the deal I select
+As an user, I want to be able to buy a deal
+As an user, I want to have a register page, so I can register my informations in the site
+As an user, I want to have multiple payment methods, so I can choose the best for me
+As an user, I want to pay with credit card
+As an user, I want to pay direct from my bank account
+As an user, I want to print a bank slip
+As an user, I want to receive an email about the deal I just bouth
+As an Administrator, I want to be able to register new deals in the site
+As an Administrator, I want to be able to edit deals in the site
+As an Administrator, I want to be able to delete deals in the site
+As an Administrator, I want to be able to query deals on the site
+As a Provider, I want to validate the Voucher's code I receive
