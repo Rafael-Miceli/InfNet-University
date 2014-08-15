@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+	<h:messages />
+</h:head> 
+<body> 
+<h2>#{msg['formulario.login']}</h2>
+<h:form>
+  <table border="1">
+    <tr>
+	    <td>#{msg['aniversario']}</td>
+	    <td>
+	    	<h:inputText value="#{controleLogin.aniversario}">
+	    		<f:convertDateTime pattern="dd/mm/yyyy" />
+	    	</h:inputText>
+	    </td>
+    </tr>
+    <tr>
+	    <td>#{msg['cpf']}</td>
+	    <td>
+	    	<h:inputText value="#{controleLogin.cpf}">
+	    		<f:converter converterId="cpfConverter" />
+	    	</h:inputText>
+	    </td>
+    </tr>
+    <tr>
+    <td>#{msg['login']}</td>
+    <td>
+    	<h:inputText value="#{controleLogin.usuario.login}" required="true" requiredMessage="Preenchimento de login é obrigatório!" />
+    </td>
+    </tr>
+    <tr>
+      <td>#{msg['senha']}</td>
+      <td>
+      <h:inputSecret value="#{controleLogin.usuario.senha}" required="true" requiredMessage="#{msg['senha.obrigatorio']}">
+      	<f:validateLength minimum="2" />
+      </h:inputSecret>
+      </td>
+    </tr>
+    <tr>
+    <td><h:commandButton value="Logar" action="#{controleLogin.realizarLogin()}" /></td>
+    </tr>
+  
+  </table>
+
+
+</h:form>
+
+</body> 
+</html>
