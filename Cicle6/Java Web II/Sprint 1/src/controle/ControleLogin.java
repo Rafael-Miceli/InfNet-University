@@ -4,14 +4,20 @@ import i18n.MessageBundleImpl;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import dao.CompradorDao;
+import dao.InicializaAdministradores;
+import regrasNegocio.RealizaAutentificacao;
 import lombok.Getter;
 import lombok.Setter;
+import modelo.Administrador;
+import modelo.Comprador;
 import modelo.Usuario;
 
 @Getter
@@ -20,46 +26,70 @@ import modelo.Usuario;
 @RequestScoped
 public class ControleLogin implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-
-	private Date aniversario;
 	
-	private String cpf;
+	@Inject
+	private InicializaAdministradores inicializaAdministradores;
+	
+	@Inject
+	private CompradorDao compradorDao;
 	
 	@Inject
 	private Usuario usuario;
-	
+
 	@Inject
 	@MessageBundleImpl
 	private ResourceBundle messages;
+
 	
-//	@PostConstruct
-//	public void init() {
-//		
-//		FacesContext context = FacesContext.getCurrentInstance();
-//		Locale locale = context.getViewRoot().getLocale();
-//		this.messages = ResourceBundle.getBundle("i18n.messages", locale);
-//	}
-	
+	//MÈtodo que realiza o login
 	public String realizarLogin()
 	{	
-		if(usuario.getLogin().equals("admin") 
-				&& usuario.getSenha().equals("admin"))
+		/*if(RealizaAutentificacao.autentificarUsuario(this.usuario, this.compradorDao)){
+			return "paginaConstrucao";
+		}
+		return "falha";*/
+		
+		String login = usuario.getLogin();
+		String senha = usuario.getSenha();
+		
+		List<Comprador> compradores = compradorDao.listarCompradores();
+		
+		//Verifica se usu·rio È administrador
+		if(login.equals("admin1") && senha.equals("admin1"))
 		{	
-			usuario.setPapel("jogador");
-			
-			final String mensagemLogin = messages.getString("login.obrigatorio");
-			System.out.println(mensagemLogin);
-			System.out.println("Data de anivers√°rio: " + this.aniversario);
-			
-			return "sucesso";
+			usuario.setPapel("admin");		
+			return "paginaConstrucao";
+		}
+		else if(login.equals("admin2") && senha.equals("admin2"))
+		{
+			usuario.setPapel("admin");		
+			return "paginaConstrucao";
+		}
+		//verifica se usu·rio È comprador
+		else if(verificaLoginSenhaDeCompradores(login, senha, compradores))
+		{
+			usuario.setPapel("comprador");		
+			return "paginaConstrucao";
 		}
 		else
 		{
 			return "falha";
 		}
 	}
+	
+	private boolean verificaLoginSenhaDeCompradores(String login, String senha, List<Comprador> compradores)
+	{
+		
+		for (Comprador comprador : compradores) {
+			if(login.equals(comprador.getLogin())
+					&& senha.equals(comprador.getSenha()))
+			{
+				return true;
+			}
+		}
+		
+		return false;		
+	}
+	
 }

@@ -8,11 +8,9 @@ import javax.interceptor.InvocationContext;
 
 import modelo.Usuario;
 
+//Somente usu·rio com perfil admin ou comprador passa por ele
 public class AutorizacaoInterceptador implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Inject
@@ -21,9 +19,10 @@ public class AutorizacaoInterceptador implements Serializable {
 	@AroundInvoke
 	public Object interceptar(InvocationContext contexto) throws Exception {
 		
-		if ("jogador".equals(this.usuario.getPapel()))
+		if ("admin".equals(this.usuario.getPapel())
+				|| "comprador".equals(this.usuario.getPapel()))
 			return contexto.proceed();
 		
-		throw new RuntimeException("Permiss√£o negada");
+		throw new RuntimeException("Permiss„o negada");
 	}
 }

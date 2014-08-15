@@ -27,10 +27,15 @@ public class Usuario implements Serializable {
 	private static final long serialVersionUID = 6185173587860633317L;
 
 	@NonNull
-	@Size(min = 2, message = "{login.tamanho.minimo}")
+	@Size(min = 3, max = 50,  message = "{nome.tamanho}")
+	private String nome;
+	
+	@NonNull
+	@Size(max = 10, message = "{login.tamanho.minimo}")
 	private String login;
 	
 	@NonNull
+	@Size(max = 20, message = "{senha.tamanho.minimo}")
 	private String senha;
 	
 	@NonNull
