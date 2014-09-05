@@ -1,0 +1,175 @@
+body{
+    background-color: rgba(221, 221, 221, 0.3);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+div#interface{
+    margin: 0 auto;
+    width: 1000px;
+	 /*padding: 0 1rem;
+     max-width: 94rem;
+     //Horizontally center containers 
+    margin: 0 auto;*/
+    background-color: #ffffff;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+/* top-bar */
+
+.top-bar{
+   /* margin: -3px;
+    padding-top: 5px;
+    padding-bottom: 10px; 
+    margin-bottom: 10px;
+    padding-right: 100px;*/
+    background-color: #17679d;
+    height: 30px;
+    width: 100%;
+    margin-top: -16px;
+    color: #ffffff;
+}
+
+.top-bar ul li{
+    margin-left: 930px;
+    list-style: none;
+    padding-top: 5px;
+}
+
+.top-bar a{
+    text-decoration: none;
+    padding: 10px; 
+    color: #ffffff;
+}
+
+.top-bar a:hover{
+    text-decoration: underline;
+}
+
+
+/* header */
+
+header.cabecalho{
+   clear: right;
+   border-bottom: 1px #606060 solid;
+   overflow: hidden; /* para que não tenha rolagem se a imagem de fundo for maior que a tela */
+   height: 150px;  /*Tamanho do cabeçalho */
+   background: url("../Img/compraviablog4.jpg")no-repeat 183px ; /* Deslocamento lateral e vertical */
+   background-size: 400px 150px; 
+   background-color: #B0E2FF;
+}
+
+header.cabecalho h1{
+     opacity: 0; /* Para esconder o H1 */
+}
+
+/* menu */
+
+nav.menu{
+	display: block;/*Faço o menu ser exibido como um bloco , um bloco pode flutuar pela tela */
+    /*margin: 0 auto;*/
+    width: 1000px;
+    height: 50px;
+    border-bottom : 1px dotted #808080;
+    margin: -5px auto -15px ; /* Em cima , dos lados e em baixo*/
+}
+
+nav.menu  ul{
+	list-style: none;   /*Pra tirar os marcadores das li */
+	/*text-transform: uppercase;*/
+   margin-left: -50px;
+}
+
+nav.menu li{
+	display: inline-block; /* Faz com que o bloco seja exibido na mesma linha */
+	/*background-color : #dddddd;*/
+	padding: 10px;
+	margin: 2px;
+	transition: background-color 1s; /*O parâmetro transition ainda está em fase de implementação nos navegadores, vai no site prefixr e cola esse codigo q ele vai dá o código q vai rodar nos outros navegadores antigos que suportam o webkit do css3 */
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+
+}
+
+nav.menu li:hover{
+	/*background-color: #606060;*/
+} 
+
+nav.menu a{
+	color: #333;
+	text-decoration: none;
+    text-
+}
+
+nav.menu a:hover{
+	color: #17679d;
+	text-decoration: underline; /* Quando passa o mouse por cima fica sublinhado */
+}
+
+
+/* CONTEÚDO  */
+
+section{
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #0d4f7c;
+    border: 1px solid #000000; 
+    padding-top: 5px;
+    margin-top: 30px;
+}
+
+footer .container{
+    padding-top: 30px;
+    margin-left: 180px;
+    color: #ffffff;
+}
+
+/* Pagamentos e site seguro */
+
+footer.rodape div.imagem{
+    display: inline;
+}
+
+footer.rodape div.imagem:first-child{
+    margin-right: 100px;
+}
+
+footer.rodape div.site_seguro{
+    margin-left: 0px;
+}
+
+/* redes sociais */
+
+footer.rodape .redes_sociais a{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer.rodape .redes_sociais a:hover{
+    text-decoration: underline;
+}
+
+footer.rodape .redes_sociais p{
+    margin-left: 380px;
+}
+
+
+
+
+
+
+
+
+

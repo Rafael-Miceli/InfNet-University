@@ -1,0 +1,37 @@
+﻿body {
+  
+}
+
+
+/* Formatação dos campos de textos*/
+
+.registro{
+    text-indent : 50px;
+}
+
+input{
+    width: 215px;
+    margin-bottom: 10px;
+}
+
+#numero{
+    width: 55px;
+}
+
+#cep{
+    width: 80px;
+}
+
+#rua, #cidade{
+   width: 180px;
+}
+
+/* Coloca os * dos labels em vermelhot */
+.requerido{
+    color: #ff0000;
+}
+
+/* Mensagem de erro */
+.registro form.submete_formulario input:invalid{
+    border: 1px thin red;
+}
