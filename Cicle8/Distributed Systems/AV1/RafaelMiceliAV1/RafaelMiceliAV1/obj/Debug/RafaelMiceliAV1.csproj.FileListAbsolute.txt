@@ -1,0 +1,6 @@
+c:\users\rafael\documents\visual studio 2015\Projects\RafaelMiceliAV1\RafaelMiceliAV1\bin\RafaelMiceliAV1.dll.config
+c:\users\rafael\documents\visual studio 2015\Projects\RafaelMiceliAV1\RafaelMiceliAV1\bin\RafaelMiceliAV1.dll
+c:\users\rafael\documents\visual studio 2015\Projects\RafaelMiceliAV1\RafaelMiceliAV1\bin\RafaelMiceliAV1.pdb
+c:\users\rafael\documents\visual studio 2015\Projects\RafaelMiceliAV1\RafaelMiceliAV1\obj\Debug\RafaelMiceliAV1.csprojResolveAssemblyReference.cache
+c:\users\rafael\documents\visual studio 2015\Projects\RafaelMiceliAV1\RafaelMiceliAV1\obj\Debug\RafaelMiceliAV1.dll
+c:\users\rafael\documents\visual studio 2015\Projects\RafaelMiceliAV1\RafaelMiceliAV1\obj\Debug\RafaelMiceliAV1.pdb
