@@ -1,0 +1,5 @@
+C:\Users\Rafael\Documents\GitHub\Monitoria-Infnet\Eventos e Delegates\Events\SubscribeToWorkshop.Domain\bin\Debug\SubscribeToWorkshop.Domain.dll
+C:\Users\Rafael\Documents\GitHub\Monitoria-Infnet\Eventos e Delegates\Events\SubscribeToWorkshop.Domain\bin\Debug\SubscribeToWorkshop.Domain.pdb
+C:\Users\Rafael\Documents\GitHub\Monitoria-Infnet\Eventos e Delegates\Events\SubscribeToWorkshop.Domain\obj\Debug\SubscribeToWorkshop.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Rafael\Documents\GitHub\Monitoria-Infnet\Eventos e Delegates\Events\SubscribeToWorkshop.Domain\obj\Debug\SubscribeToWorkshop.Domain.dll
+C:\Users\Rafael\Documents\GitHub\Monitoria-Infnet\Eventos e Delegates\Events\SubscribeToWorkshop.Domain\obj\Debug\SubscribeToWorkshop.Domain.pdb

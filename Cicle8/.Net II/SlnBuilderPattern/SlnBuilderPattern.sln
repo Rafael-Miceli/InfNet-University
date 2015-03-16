@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubscribeToWorkshop.Domain", "SubscribeToWorkshop.Domain\SubscribeToWorkshop.Domain.csproj", "{495B49D4-70FC-43D3-98F9-47A33D980455}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4B69B2CA-0527-4071-A459-182F63737699}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubscribeToWorkshop.Domain.Tests", "SubscribeToWorkshop.Services.Tests\SubscribeToWorkshop.Domain.Tests.csproj", "{B4EF19CB-CCAE-4A3B-89ED-B7F483013085}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{495B49D4-70FC-43D3-98F9-47A33D980455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495B49D4-70FC-43D3-98F9-47A33D980455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495B49D4-70FC-43D3-98F9-47A33D980455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495B49D4-70FC-43D3-98F9-47A33D980455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4EF19CB-CCAE-4A3B-89ED-B7F483013085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EF19CB-CCAE-4A3B-89ED-B7F483013085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4EF19CB-CCAE-4A3B-89ED-B7F483013085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4EF19CB-CCAE-4A3B-89ED-B7F483013085}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

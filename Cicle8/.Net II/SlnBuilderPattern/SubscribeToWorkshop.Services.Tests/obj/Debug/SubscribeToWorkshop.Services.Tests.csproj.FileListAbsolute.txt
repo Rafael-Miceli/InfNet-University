@@ -1,0 +1,1 @@
+C:\Users\Rafael\Documents\GitHub\Monitoria-Infnet\Eventos e Delegates\Events\SubscribeToWorkshop.Services.Tests\obj\Debug\SubscribeToWorkshop.Services.Tests.csprojResolveAssemblyReference.cache
